@@ -542,6 +542,112 @@ h1 {
   text-shadow: 0 0 16px rgba(255, 0, 0, 0.9);
 }
 
+.server-status-card {
+  width: 100%;
+  max-width: 520px;
+  margin: 28px 0 20px;
+  padding: 22px;
+  background: linear-gradient(135deg, #171717, #090909);
+  border: 1px solid rgba(255, 32, 32, 0.45);
+  border-radius: 14px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+  transition: 0.3s ease;
+}
+
+.server-status-card:hover {
+  border-color: #ff2020;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(255, 32, 32, 0.12);
+}
+
+.server-status-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.server-status-dot {
+  width: 11px;
+  height: 11px;
+  background: #ff3030;
+  border-radius: 50%;
+  box-shadow: 0 0 12px #ff3030;
+  flex-shrink: 0;
+}
+
+.server-status-info strong {
+  display: block;
+  font-size: 15px;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+.server-status-info small {
+  display: block;
+  margin-top: 5px;
+  color: #999;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+}
+
+.server-status-badge {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 7px 11px;
+  border-radius: 5px;
+  background: rgba(255, 32, 32, 0.12);
+  border: 1px solid rgba(255, 32, 32, 0.3);
+  color: #ff4545;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.server-status-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-top: 20px;
+  padding-top: 18px;
+  border-top: 1px solid #ffffff15;
+}
+
+.server-status-number {
+  display: block;
+  font-size: 25px;
+  font-weight: 900;
+  color: #fff;
+}
+
+.server-status-number small {
+  color: #999;
+  font-size: 15px;
+}
+
+.server-status-label {
+  display: block;
+  margin-top: 7px;
+  color: #999;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+.server-status-offline .server-status-number {
+  color: #ff4545;
+  font-size: 19px;
+  margin-top: 4px;
+}
+
+@media (max-width: 600px) {
+  .server-status-card {
+    padding: 17px;
+  }
+
+  .server-status-number {
+    font-size: 22px;
+  }
+}
+
   </style>
 </head>
 
@@ -596,7 +702,31 @@ h1 {
               ISTRAŽI SERVER ↓
             </a>
           </div>
+<div class="server-status-card">
+  <div class="server-status-info">
+    <span class="server-status-dot"></span>
+    <div>
+      <strong>KODEX ROLEPLAY</strong>
+      <small>STATUS SERVERA</small>
+    </div>
+  </div>
 
+  <div class="server-status-badge">
+    U PRIPREMI
+  </div>
+
+  <div class="server-status-stats">
+    <div>
+      <span class="server-status-number">0 <small>/ 60</small></span>
+      <span class="server-status-label">IGRAČA NA SERVERU</span>
+    </div>
+
+    <div class="server-status-offline">
+      <span class="server-status-number">OFFLINE</span>
+      <span class="server-status-label">FIVEM STATUS</span>
+    </div>
+  </div>
+</div>
           <div class="hero-note">
             FiveM Roleplay zajednica · Tvoja priča počinje ovde
           </div>
