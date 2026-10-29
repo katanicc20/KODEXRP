@@ -1,118 +1,563 @@
-Dobrodošli na **KodexRP**. Cilj ovog pravilnika je da održimo ozbiljan, realan i kvalitetan roleplay za sve igrače. Svaki igrač je dužan da poštuje RP pravila, razmišlja kao svoj karakter i omogućava drugima fer i zanimljivu igru.
 
-Kršenje ovih pravila može dovesti do administrativnih kazni. ⚠️
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RP Pravila | KODEX RP</title>
+<meta name="theme-color" content="#0a0a0a">
 
-━━━━━━━━━━━━━━━━━━
+<style>
+:root {
+  --red: #ff2525;
+  --red-dark: #a80000;
+  --bg: #090909;
+  --panel: #121212;
+  --border: rgba(255,255,255,.09);
+  --muted: #a5a5a5;
+}
 
-🚫 **PG (Power Gaming)**  
-Power Gaming predstavlja izvođenje radnji koje nisu moguće ili realne u stvarnom životu. Zabranjeno je forsiranje nerealnih poteza, iskorišćavanje mehanike igre ili situacija gde vaš lik radi nešto što bi u stvarnosti bilo nemoguće.
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-━━━━━━━━━━━━━━━━━━
+html { scroll-behavior: smooth; }
 
-🚫 **MG (Meta Gaming)**  
-Meta Gaming je korišćenje informacija koje vaš karakter nije saznao u igri. Informacije sa Discorda, streamova ili drugih izvora van igre ne smeju uticati na odluke vašeg karaktera.
+body {
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(190,0,0,.17), transparent 48%),
+    var(--bg);
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+}
 
-━━━━━━━━━━━━━━━━━━
+a { color: inherit; text-decoration: none; }
 
-🚫 **LTA (Leave To Avoid)**  
-Zabranjeno je napuštanje servera tokom aktivne RP situacije kako bi se izbegle posledice svojih postupaka.
+header {
+  border-bottom: 1px solid var(--border);
+  background: rgba(9,9,9,.9);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: blur(14px);
+}
 
-━━━━━━━━━━━━━━━━━━
+.nav {
+  max-width: 1150px;
+  margin: auto;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
 
-🚫 **DTA (Death To Avoid)**  
-Zabranjeno je namerno izazivanje smrti svog karaktera kako bi se izbegla određena RP situacija, kazna ili posledice svojih postupaka.
+.logo {
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
 
-━━━━━━━━━━━━━━━━━━
+.logo span { color: var(--red); }
 
-🚫 **NLR (New Life Rule)**  
-Nakon smrti vaš karakter zaboravlja događaje koji su doveli do smrti. Nije dozvoljeno vraćanje na mesto događaja, traženje osvete ili korišćenje prethodnih informacija.
+.back {
+  border: 1px solid #383838;
+  padding: 11px 16px;
+  border-radius: 8px;
+  color: #ddd;
+  font-size: 13px;
+  transition: .25s;
+}
 
-━━━━━━━━━━━━━━━━━━
+.back:hover {
+  border-color: var(--red);
+  color: #fff;
+  box-shadow: 0 0 18px #ff252522;
+}
 
-🚫 **FAILRP**  
-Zabranjeno je svako ponašanje koje uništava realnost roleplay-a. Igrači moraju donositi odluke koje imaju smisla u okviru svog karaktera i situacije.
+.hero {
+  text-align: center;
+  padding: 75px 20px 45px;
+  animation: appear .7s ease both;
+}
 
-━━━━━━━━━━━━━━━━━━
+.eyebrow {
+  display: inline-block;
+  border: 1px solid #ff25254d;
+  color: #ff5555;
+  background: #ff25250d;
+  padding: 8px 13px;
+  border-radius: 30px;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 22px;
+}
 
-🚫 **FEARRP (Fear Roleplay)**  
-Svaki igrač mora pokazati strah za svoj život u opasnim situacijama. Nije dozvoljeno ponašati se kao da život vašeg karaktera nema vrednost.
+h1 {
+  font-size: clamp(35px, 7vw, 66px);
+  line-height: 1.05;
+  font-weight: 900;
+  letter-spacing: -2px;
+}
 
-━━━━━━━━━━━━━━━━━━
+h1 span {
+  color: var(--red);
+  text-shadow: 0 0 30px #ff25252b;
+}
 
-🚫 **RP2W (Roleplay To Win)**  
-Zabranjeno je forsiranje roleplay-a samo kako biste vi pobedili. Svaka strana mora imati mogućnost da odigra svoju ulogu i učestvuje u situaciji.
+.hero p {
+  max-width: 650px;
+  margin: 20px auto 0;
+  color: #aaa;
+  line-height: 1.8;
+  font-size: 15px;
+}
 
-━━━━━━━━━━━━━━━━━━
+.notice {
+  max-width: 800px;
+  margin: 0 auto 35px;
+  padding: 17px 20px;
+  border: 1px solid #ff25252b;
+  border-left: 3px solid var(--red);
+  background: linear-gradient(100deg,#ff252510, #121212);
+  border-radius: 8px;
+  color: #d0d0d0;
+  line-height: 1.7;
+  font-size: 13px;
+}
 
-🚫 **DB (Drive-By)**  
-Drive-By je strogo zabranjen. Zabranjeno je pucanje iz bilo kog vozila, kao i korišćenje vozila za sticanje nepravedne prednosti tokom RP situacija.
+.notice strong { color: #fff; }
 
-━━━━━━━━━━━━━━━━━━
+main {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 22px 65px;
+}
 
-🚫 **Stream Sniping**  
-Zabranjeno je korišćenje informacija sa streamova, videa ili prenosa drugih igrača radi pronalaženja njihove lokacije ili dobijanja prednosti u RP-u.
+.toolbar {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 28px;
+}
 
-━━━━━━━━━━━━━━━━━━
+.search-wrap {
+  flex: 1;
+  position: relative;
+}
 
-🚫 **Trolling**  
-Zabranjeno je namerno kvarenje igre drugim igračima, ometanje RP situacija i stvaranje problema bez razloga.
+.search-wrap span {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
 
-━━━━━━━━━━━━━━━━━━
+#search {
+  width: 100%;
+  padding: 15px 15px 15px 44px;
+  border: 1px solid #303030;
+  border-radius: 9px;
+  background: #111;
+  color: white;
+  outline: none;
+  font-size: 14px;
+  transition: .25s;
+}
 
-🚫 **BA (Bug Abuse)**  
-Zabranjeno je korišćenje bagova, grešaka ili propusta servera radi dobijanja prednosti. Svaki pronađeni bug mora biti prijavljen administraciji.
+#search:focus {
+  border-color: var(--red);
+  box-shadow: 0 0 18px #ff25251a;
+}
 
-━━━━━━━━━━━━━━━━━━
+.count {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  padding: 0 15px;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  color: #bbb;
+  font-size: 12px;
+}
 
-🚫 **KRP (Kvarenje RolePlay-a)**  
-Zabranjeno je svako ponašanje koje uništava ozbiljnost servera i sprečava druge igrače da uživaju u RP iskustvu.
+.count b { color: var(--red); margin-right: 5px; }
 
-━━━━━━━━━━━━━━━━━━
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 38px 0 17px;
+  font-size: 17px;
+  font-weight: 800;
+}
 
-🚫 **VDM (Vehicle Deathmatch)**  
-Zabranjeno je korišćenje vozila kao oružja bez validnog RP razloga. Nije dozvoljeno namerno udaranje ili ubijanje igrača vozilom.
+.section-title:before {
+  content: "";
+  width: 4px;
+  height: 22px;
+  border-radius: 5px;
+  background: var(--red);
+  box-shadow: 0 0 12px #ff252566;
+}
 
-━━━━━━━━━━━━━━━━━━
+.rules-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 13px;
+}
 
-🚫 **TK (Team Kill)**  
-Zabranjeno je ubijanje članova svoje organizacije, frakcije ili saveznika bez ozbiljnog RP razloga.
+.rule {
+  position: relative;
+  overflow: hidden;
+  padding: 21px;
+  background: linear-gradient(140deg,#171717,#101010);
+  border: 1px solid var(--border);
+  border-radius: 11px;
+  transition: transform .25s, border-color .25s, box-shadow .25s;
+  animation: appear .45s ease both;
+}
 
-━━━━━━━━━━━━━━━━━━
+.rule:before {
+  content: "";
+  position: absolute;
+  width: 3px;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background: transparent;
+  transition: .25s;
+}
 
-🚫 **CK (Character Kill)**  
-CK predstavlja trajno uklanjanje karaktera iz RP priče. Mora imati jak RP razlog i biti izveden pravilno uz poštovanje pravila.
+.rule:hover {
+  transform: translateY(-3px);
+  border-color: #ff25255c;
+  box-shadow: 0 9px 28px #0008, 0 0 20px #ff25250a;
+}
 
-━━━━━━━━━━━━━━━━━━
+.rule:hover:before { background: var(--red); }
 
-🚫 **SK (Spawn Kill)**  
-Zabranjeno je napadanje igrača na mestu gde se pojavljuje ili gde nema realnu mogućnost da reaguje.
+.rule-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 13px;
+}
 
-━━━━━━━━━━━━━━━━━━
+.rule-icon {
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  background: #ff252512;
+  border: 1px solid #ff25252b;
+  border-radius: 9px;
+  color: #ff4444;
+  font-size: 17px;
+}
 
-🚫 **RK (Revenge Kill)**  
-Zabranjeno je vraćanje radi osvete nakon smrti. Vaš karakter ne sme koristiti informacije iz prethodnog života.
+.rule h3 {
+  font-size: 15px;
+  font-weight: 800;
+}
 
-━━━━━━━━━━━━━━━━━━
+.rule h3 span {
+  color: var(--red);
+}
 
-🚫 **SZK (Safe Zone Kill)**  
-Zabranjeno je započinjanje sukoba, pucnjave ili ubijanje igrača u sigurnim zonama.
+.tag {
+  margin-left: auto;
+  color: #ff6262;
+  font-size: 9px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  border: 1px solid #ff25252b;
+  background: #ff25250b;
+  padding: 5px 7px;
+  border-radius: 4px;
+}
 
-━━━━━━━━━━━━━━━━━━
+.rule p {
+  color: #aaa;
+  font-size: 13px;
+  line-height: 1.8;
+}
 
-🚫 **RDM (Random Deathmatch)**  
-Zabranjeno je ubijanje igrača bez validnog RP razloga ili prethodno razvijene situacije.
+.rule[hidden], .section-title[hidden] { display: none; }
 
-━━━━━━━━━━━━━━━━━━
+.empty {
+  display: none;
+  text-align: center;
+  padding: 40px 15px;
+  color: #aaa;
+  border: 1px dashed #333;
+  border-radius: 10px;
+}
 
-🚫 **RP DM (Deathmatch)**  
-Zabranjeno je započinjanje konflikta bez kvalitetne RP priče i razloga.
+.empty.show { display: block; }
 
-━━━━━━━━━━━━━━━━━━
+footer {
+  border-top: 1px solid var(--border);
+  padding: 28px 20px;
+  text-align: center;
+  color: #777;
+  font-size: 12px;
+  line-height: 1.8;
+}
 
-🚫 **CB (Cop Baiting)**  
-Zabranjeno je namerno provociranje policije kako bi se izazvala potera ili sukob bez realnog RP razloga.
+footer strong { color: var(--red); }
 
-━━━━━━━━━━━━━━━━━━
+@keyframes appear {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
-🚫 **Random Loot**  
-Zabranjeno je nasumično uzimanje stvari od igrača bez odgovarajuće RP situacije.
+@media (max-width: 650px) {
+  .nav { padding: 17px 15px; }
+  .logo { font-size: 18px; }
+  .back { padding: 10px; font-size: 11px; }
+  .hero { padding: 55px 17px 35px; }
+  .hero p { font-size: 14px; }
+  main { padding: 0 14px 45px; }
+  .rules-grid { grid-template-columns: 1fr; }
+  .toolbar { flex-direction: column; }
+  .search-wrap { width: 100%; }
+  #search { padding-top: 14px; padding-bottom: 14px; }
+  .count { padding: 12px; }
+  .notice { margin-left: 14px; margin-right: 14px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <nav class="nav">
+    <a class="logo" href="index.html">KODEX<span> RP</span></a>
+    <a class="back" href="index.html">← NAZAD NA POČETNU</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="eyebrow">KODEX ROLEPLAY COMMUNITY</div>
+  <h1>RP <span>PRAVILA</span></h1>
+  <p>
+    Pravila koja čuvaju ozbiljan, realan i kvalitetan roleplay.
+    Upoznaj se sa pravilima pre nego što započneš svoju priču.
+  </p>
+</section>
+
+<div class="notice">
+  ⚠️ <strong>VAŽNO OBAVEŠTENJE</strong><br>
+  Svaki igrač je dužan da poštuje RP pravila, razmišlja kao svoj karakter
+  i omogućava drugima fer i zanimljivu igru. Kršenje pravila može dovesti
+  do administrativnih kazni.
+</div>
+
+<main>
+  <div class="toolbar">
+    <div class="search-wrap">
+      <span>⌕</span>
+      <input id="search" type="search" placeholder="Pretraži pravila... npr. FearRP, RDM, Meta Gaming">
+    </div>
+    <div class="count"><b id="shown">23</b> pravila</div>
+  </div>
+
+  <h2 class="section-title">OSNOVNA RP PRAVILA</h2>
+  <div class="rules-grid">
+
+    <article class="rule">
+      <div class="rule-top"><div class="rule-icon">⚙</div><h3><span>PG</span> — Power Gaming</h3><span class="tag">RP</span></div>
+      <p>Power Gaming predstavlja izvođenje radnji koje nisu moguće ili realne u stvarnom životu. Zabranjeno je forsiranje nerealnih poteza, iskorišćavanje mehanike igre ili situacija gde vaš lik radi nešto što bi u stvarnosti bilo nemoguće.</p>
+    </article>
+
+    <article class="rule">
+      <div class="rule-top"><div class="rule-icon">🧠</div><h3><span>MG</span> — Meta Gaming</h3><span class="tag">RP</span></div>
+      <p>Meta Gaming je korišćenje informacija koje vaš karakter nije saznao u igri. Informacije sa Discorda, streamova ili drugih izvora van igre ne smeju uticati na odluke vašeg karaktera.</p>
+    </article>
+
+    <article class="rule">
+      <div class="rule-top"><div class="rule-icon">🚪</div><h3><span>LTA</span> — Leave To Avoid</h3><span class="tag">ZABRANJENO</span></div>
+      <p>Zabranjeno je napuštanje servera tokom aktivne RP situacije kako bi se izbegle posledice svojih postupaka.</p>
+    </article>
+
+    <article class="rule">
+      <div class="rule-top"><div class="rule-icon">💀</div><h3><span>DTA</span> — Death To Avoid</h3><span class="tag">ZABRANJENO</span></div>
+      <p>Zabranjeno je namerno izazivanje smrti svog karaktera kako bi se izbegla određena RP situacija, kazna ili posledice svojih postupaka.</p>
+    </article>
+
+    <article class="rule">
+      <div class="rule-top"><div class="rule-icon">🔄</div><h3><span>NLR</span> — New Life Rule</h3><span class="tag">RP</span></div>
+      <p>Nakon smrti vaš karakter zaboravlja događaje koji su doveli do smrti. Nije dozvoljeno vraćanje na mesto događaja, traženje osvete ili korišćenje prethodnih informacija.</p>
+    </article>
+
+    <article class="rule">
+      <div class="rule-top"><div class="rule-icon">⚠</div><h3><span>FAILRP</span></h3><span class="tag">RP</span></div>
+      <p>Zabranjeno je svako ponašanje koje uništava realnost roleplay-a. Igrači moraju donositi odluke koje imaju smisla u okviru svog karaktera i situacije.</p>
+    </article>
+
+    <article class="rule">
+      <div class="rule-top"><div class="rule-icon">❤️</div><h3><span>FEARRP</span> — Fear Roleplay</h3><span class="tag">RP</span></div>
+      <p>Svaki igrač mora pokazati strah za svoj život u opasnim situacijama. Nije dozvoljeno ponašati se kao da život vašeg karaktera nema vrednost.</p>
+    </article>
+
+    <article class="rule">
+      <div class="rule-top"><div class="rule-icon">⚖</div><h3><span>RP2W</span> — Roleplay To Win</h3><span class="tag">FER IGRA</span></div>
+      <p>Zabranjeno je forsiranje roleplay-a samo kako biste vi pobedili. Svaka strana mora imati mogućnost da odigra svoju ulogu i učestvuje u situaciji.</p>
+    </article>
+
+    <article class="rule">
+      <div class="rule-top"><div class="rule-icon">🎭</div><h3><span>KRP</span> — Kvarenje RolePlay-a</h3><span class="tag">RP</span></div>
+      <p>Zabranjeno je svako ponašanje koje uništava ozbiljnost servera i sprečava druge igrače da uživaju u RP iskustvu.</p>
+    </article>
+
+    <article class="rule">
+      <div class="rule-top"><div class="rule-icon">😈</div><h3><span>Trolling</span></h3><span class="tag">ZABRANJENO</span></div>
+      <p>Zabranjeno je namerno kvarenje igre drugim igračima, ometanje RP situacija i stvaranje problema bez razloga.</p>
+    </article>
+
+    <article class="rule">
+      <div class="rule-top"><div class="rule-icon">🛠</div><h3><span>BA</span> — Bug Abuse</h3><span class="tag">ZABRANJENO</span></div>
+      <p>Zabranjeno je korišćenje bagova, grešaka ili propusta servera radi dobijanja prednosti. Svaki pronađeni bug mora biti prijavljen administraciji.</p>
+    </article>
+
+    <article class="rule">
+      <div class="rule-top"><div class="rule-icon">📺</div><h3><span>Stream Sniping</span></h3><span class="tag">ZABRANJENO</span></div>
+      <p>Zabranjeno je korišćenje informacija sa streamova, videa ili prenosa drugih igrača radi pronalaženja njihove lokacije ili dobijanja prednosti u RP-u.</p>
+    </article>
+  </div>
+
+  <h2 class="section-title">BORBA, SMRT I SUKOBI</h2>
+  <div class="rules-grid">
+
+    <article class="rule">
+      <div class="rule-top"><div class="rule-icon">🚗</div><h3><span>DB</span> — Drive-By</h3><span class="tag">ZABRANJENO</span></div>
+      <p>Drive-By je strogo zabranjen. Zabranjeno je pucanje iz bilo kog vozila, kao i korišćenje vozila za sticanje nepravedne prednosti tokom RP situacija.</p>
+    </article>
+
+    <article class="rule">
+      <div class="rule-top"><div class="rule-icon">🚘</div><h3><span>VDM</span> — Vehicle Deathmatch</h3><span class="tag">ZABRANJENO</span></div>
+      <p>Zabranjeno je korišćenje vozila kao oružja bez validnog RP razloga. Nije dozvoljeno namerno udaranje ili ubijanje igrača vozilom.</p>
+    </article>
+
+    <article class="rule">
+      <div class="rule-top"><div class="rule-icon">🎯</div><h3><span>RDM</span> — Random Deathmatch</h3><span class="tag">ZABRANJENO</span></div>
+      <p>Zabranjeno je ubijanje igrača bez validnog RP razloga ili prethodno razvijene situacije.</p>
+    </article>
+
+    <article class="rule">
+      <div class="rule-top"><div class="rule-icon">💥</div><h3><span>RP DM</span> — Deathmatch</h3><span class="tag">ZABRANJENO</span></div>
+      <p>Zabranjeno je započinjanje konflikta bez kvalitetne RP priče i razloga.</p>
+    </article>
+
+    <article class="rule">
+      <div class="rule-top"><div class="rule-icon">🔫</div><h3><span>RK</span> — Revenge Kill</h3><span class="tag">ZABRANJENO</span></div>
+      <p>Zabranjeno je vraćanje radi osvete nakon smrti. Vaš karakter ne sme koristiti informacije iz prethodnog života.</p>
+    </article>
+
+    <article class="rule">
+      <div class="rule-top"><div class="rule-icon">🚷</div><h3><span>SK</span> — Spawn Kill</h3><span class="tag">ZABRANJENO</span></div>
+      <p>Zabranjeno je napadanje igrača na mestu gde se pojavljuje ili gde nema realnu mogućnost da reaguje.</p>
+    </article>
+
+    <article class="rule">
+      <div class="rule-top"><div class="rule-icon">🛡</div><h3><span>SZK</span> — Safe Zone Kill</h3><span class="tag">ZABRANJENO</span></div>
+      <p>Zabranjeno je započinjanje sukoba, pucnjave ili ubijanje igrača u sigurnim zonama.</p>
+    </article>
+
+    <article class="rule">
+      <div class="rule-top"><div class="rule-icon">👥</div><h3><span>TK</span> — Team Kill</h3><span class="tag">ZABRANJENO</span></div>
+      <p>Zabranjeno je ubijanje članova svoje organizacije, frakcije ili saveznika bez ozbiljnog RP razloga.</p>
+    </article>
+
+    <article class="rule">
+      <div class="rule-top"><div class="rule-icon">☠</div><h3><span>CK</span> — Character Kill</h3><span class="tag">POSEBNO PRAVILO</span></div>
+      <p>CK predstavlja trajno uklanjanje karaktera iz RP priče. Mora imati jak RP razlog i biti izveden pravilno uz poštovanje pravila.</p>
+    </article>
+  </div>
+
+  <h2 class="section-title">POSEBNE SITUACIJE</h2>
+  <div class="rules-grid">
+
+    <article class="rule">
+      <div class="rule-top"><div class="rule-icon">🚔</div><h3><span>CB</span> — Cop Baiting</h3><span class="tag">RP</span></div>
+      <p>Zabranjeno je namerno provociranje policije kako bi se izazvala potera ili sukob bez realnog RP razloga.</p>
+    </article>
+
+    <article class="rule">
+      <div class="rule-top"><div class="rule-icon">🎒</div><h3><span>Random Loot</span></h3><span class="tag">RP</span></div>
+      <p>Zabranjeno je nasumično uzimanje stvari od igrača bez odgovarajuće RP situacije.</p>
+    </article>
+
+  </div>
+
+  <div id="empty" class="empty">Nema pravila koja odgovaraju tvojoj pretrazi.</div>
+</main>
+
+<footer>
+  <strong>KODEX RP</strong><br>
+  Poštuj pravila. Poštuj roleplay. Poštuj druge igrače.<br>
+  © KODEX RP — Sva prava zadržana.
+</footer>
+
+<script>
+const search = document.getElementById("search");
+const rules = [...document.querySelectorAll(".rule")];
+const sections = [...document.querySelectorAll(".section-title")];
+const shown = document.getElementById("shown");
+const empty = document.getElementById("empty");
+
+function filterRules() {
+  const query = search.value
+    .toLocaleLowerCase("sr")
+    .trim();
+
+  let total = 0;
+
+  rules.forEach(rule => {
+    const match = rule.textContent
+      .toLocaleLowerCase("sr")
+      .includes(query);
+
+    rule.hidden = !match;
+    if (match) total++;
+  });
+
+  sections.forEach(section => {
+    let next = section.nextElementSibling;
+    let hasVisibleRule = false;
+
+    while (next && !next.classList.contains("section-title")) {
+      if (next.classList.contains("rules-grid") &&
+          next.querySelector(".rule:not([hidden])")) {
+        hasVisibleRule = true;
+      }
+      next = next.nextElementSibling;
+    }
+
+    section.hidden = !hasVisibleRule;
+  });
+
+  shown.textContent = total;
+  empty.classList.toggle("show", total === 0);
+}
+
+search.addEventListener("input", filterRules);
+filterRules();
+</script>
+
+</body>
+</html>
+
