@@ -1,0 +1,285 @@
+
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KODEX RP | Donacije</title>
+
+<style>
+:root {
+  --red: #ff2020;
+  --dark-red: #a80000;
+  --bg: #080808;
+  --panel: #151515;
+  --white: #ffffff;
+  --muted: #bdbdbd;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: var(--white);
+  background:
+    radial-gradient(ellipse at top, #350909 0%, transparent 55%),
+    var(--bg);
+  min-height: 100vh;
+}
+
+header {
+  padding: 22px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ffffff15;
+  background: #080808dd;
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.logo span {
+  color: var(--red);
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header a:hover {
+  color: var(--red);
+}
+
+main {
+  width: min(900px, 90%);
+  margin: 70px auto;
+  text-align: center;
+}
+
+.tag {
+  display: inline-block;
+  color: var(--red);
+  border: 1px solid #ff202055;
+  background: #ff202010;
+  padding: 9px 16px;
+  border-radius: 30px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: clamp(38px, 7vw, 68px);
+  margin: 25px 0 15px;
+  font-weight: 900;
+}
+
+h1 span {
+  color: var(--red);
+  text-shadow: 0 0 25px #ff202044;
+}
+
+.intro {
+  max-width: 650px;
+  margin: 0 auto;
+  color: var(--muted);
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+.card {
+  margin: 40px auto;
+  padding: 38px 28px;
+  max-width: 650px;
+  background: linear-gradient(145deg, #191919, #0d0d0d);
+  border: 1px solid #ff20204d;
+  border-radius: 18px;
+  box-shadow: 0 15px 50px #0008;
+  transition: .3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: var(--red);
+  box-shadow: 0 15px 45px #ff202018;
+}
+
+.discord-icon {
+  font-size: 48px;
+  margin-bottom: 18px;
+}
+
+h2 {
+  font-size: 27px;
+  margin-bottom: 14px;
+}
+
+.card p {
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 16px 25px;
+  background: var(--red);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 900;
+  transition: .25s;
+  box-shadow: 0 0 25px #ff202022;
+}
+
+.button:hover {
+  background: var(--dark-red);
+  transform: scale(1.04);
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-top: 35px;
+  text-align: left;
+}
+
+.step {
+  background: #121212;
+  border: 1px solid #ffffff12;
+  border-radius: 12px;
+  padding: 22px;
+}
+
+.number {
+  color: var(--red);
+  font-size: 25px;
+  font-weight: 900;
+  margin-bottom: 12px;
+}
+
+.step p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.7;
+  margin-top: 8px;
+}
+
+.notice {
+  color: #999;
+  font-size: 12px;
+  line-height: 1.7;
+  margin: 25px auto;
+  max-width: 650px;
+}
+
+footer {
+  text-align: center;
+  padding: 25px;
+  border-top: 1px solid #ffffff12;
+  color: #777;
+  font-size: 13px;
+}
+
+@media (max-width: 650px) {
+  header {
+    padding: 20px 5%;
+  }
+
+  .steps {
+    grid-template-columns: 1fr;
+  }
+
+  main {
+    margin-top: 45px;
+  }
+
+  .card {
+    padding: 28px 20px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">KODEX <span>RP</span></div>
+  <a href="index.html">← POČETNA</a>
+</header>
+
+<main>
+  <div class="tag">PODRŽI NAŠU ZAJEDNICU</div>
+
+  <h1>KODEX <span>DONACIJE</span></h1>
+
+  <p class="intro">
+    Želiš da podržiš razvoj KODEX RP servera?
+    Otvori tiket na našem Discordu i naš tim će ti objasniti
+    postupak doniranja i dostupne mogućnosti.
+  </p>
+
+  <section class="card">
+    <div class="discord-icon">🎫</div>
+    <h2>Donacije preko tiketa</h2>
+    <p>
+      Sve informacije dobijaš direktno od našeg tima.
+      Otvori tiket, navedi da želiš da doniraš i sačekaj
+      odgovor nadležnog člana osoblja.
+    </p>
+
+    <!-- ZAMENI LINK ISPOD SVOJIM DISCORD INVITE LINKOM -->
+    <a class="button"
+       href="TVOJ_DISCORD_INVITE_LINK"
+       target="_blank"
+       rel="noopener noreferrer">
+      🎫 OTVORI DISCORD TIKET ↗
+    </a>
+  </section>
+
+  <h2>Kako funkcioniše?</h2>
+
+  <div class="steps">
+    <div class="step">
+      <div class="number">01</div>
+      <h3>Uđi na Discord</h3>
+      <p>Pridruži se zvaničnom KODEX RP Discord serveru.</p>
+    </div>
+
+    <div class="step">
+      <div class="number">02</div>
+      <h3>Otvori tiket</h3>
+      <p>Izaberi odgovarajuću kategoriju ili zatraži pomoć osoblja.</p>
+    </div>
+
+    <div class="step">
+      <div class="number">03</div>
+      <h3>Dogovori detalje</h3>
+      <p>Tim će ti objasniti dostupne opcije i naredne korake.</p>
+    </div>
+  </div>
+
+  <p class="notice">
+    Donacije su namenjene podršci razvoju servera.
+    Pre uplate proveri sve uslove sa ovlašćenim osobljem.
+    Nemoj slati podatke kartice ili lozinke putem Discord tiketa.
+  </p>
+</main>
+
+<footer>
+  © 2026 KODEX RP — Sva prava zadržana.
+</footer>
+
+</body>
+</html>
