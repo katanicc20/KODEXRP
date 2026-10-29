@@ -504,6 +504,44 @@ button:hover,
   }
 }
 
+/* KODEX RP — izraženiji crveni efekti */
+
+.button,
+button,
+.nav-links a {
+  transition: all 0.3s ease !important;
+}
+
+.button:hover,
+button:hover,
+.nav-links a:hover {
+  transform: translateY(-4px) scale(1.04);
+  box-shadow: 0 0 12px #ff2222, 0 0 28px rgba(255, 0, 0, 0.55);
+}
+
+/* Crveni sjaj oko glavnog naslova */
+h1 {
+  text-shadow: 0 0 12px rgba(255, 0, 0, 0.55);
+}
+
+/* Naglašene animacije kartica */
+.card:hover,
+.feature-card:hover,
+.rule:hover {
+  transform: translateY(-7px) scale(1.02);
+  box-shadow: 0 0 24px rgba(255, 0, 0, 0.35);
+  border-color: #ff2222;
+}
+
+/* Crveni sjaj na logotipu */
+.logo {
+  transition: text-shadow 0.3s ease;
+}
+
+.logo:hover {
+  text-shadow: 0 0 16px rgba(255, 0, 0, 0.9);
+}
+
   </style>
 </head>
 
