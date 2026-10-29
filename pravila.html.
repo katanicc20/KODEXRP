@@ -1,0 +1,303 @@
+
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080808">
+  <title>Discord Pravila | KODEX RP</title>
+
+  <style>
+    :root {
+      --bg: #080808;
+      --panel: #151515;
+      --red: #e60000;
+      --white: #ffffff;
+      --muted: #c0c0c0;
+      --line: rgba(255,255,255,.10);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--white);
+      font-family: Arial, sans-serif;
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    a {
+      color: var(--white);
+      text-decoration: none;
+    }
+
+    .topbar {
+      border-bottom: 1px solid var(--line);
+      background: #101010;
+      padding: 18px 20px;
+    }
+
+    .nav {
+      max-width: 1050px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+    }
+
+    .logo {
+      font-size: 23px;
+      font-weight: 900;
+      letter-spacing: 1px;
+    }
+
+    .logo span {
+      color: var(--red);
+    }
+
+    .back {
+      border: 1px solid #383838;
+      border-radius: 8px;
+      padding: 9px 14px;
+      font-size: 13px;
+      font-weight: bold;
+      transition: .2s;
+    }
+
+    .back:hover {
+      background: var(--red);
+      border-color: var(--red);
+    }
+
+    .hero {
+      text-align: center;
+      padding: 65px 20px 35px;
+      background:
+        radial-gradient(ellipse at top, rgba(230,0,0,.19), transparent 65%);
+    }
+
+    .tag {
+      display: inline-block;
+      color: #ff5555;
+      border: 1px solid rgba(230,0,0,.45);
+      background: rgba(230,0,0,.10);
+      padding: 6px 12px;
+      border-radius: 30px;
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(30px, 5vw, 48px);
+      line-height: 1.2;
+      margin-bottom: 18px;
+      color: #ffffff;
+    }
+
+    h1 span {
+      color: var(--red);
+    }
+
+    .intro {
+      max-width: 720px;
+      margin: auto;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .content {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px 20px 60px;
+    }
+
+    .notice {
+      background: rgba(230,0,0,.08);
+      border: 1px solid rgba(230,0,0,.35);
+      border-radius: 12px;
+      padding: 17px 20px;
+      margin-bottom: 25px;
+      color: #ffffff;
+    }
+
+    .notice strong {
+      color: #ff5555;
+    }
+
+    .rule {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-left: 3px solid var(--red);
+      border-radius: 10px;
+      padding: 22px 24px;
+      margin-bottom: 15px;
+      transition: border-color .2s, transform .2s;
+    }
+
+    .rule:hover {
+      border-color: rgba(230,0,0,.65);
+      transform: translateY(-2px);
+    }
+
+    .rule h2 {
+      color: #ffffff;
+      font-size: 17px;
+      margin-bottom: 9px;
+    }
+
+    .number {
+      color: #ff4444;
+      margin-right: 7px;
+    }
+
+    .rule p {
+      color: #d0d0d0;
+      font-size: 14px;
+    }
+
+    .penalties {
+      border-left-color: #ff6b00;
+    }
+
+    .penalties h2 {
+      color: #ff9a50;
+    }
+
+    .footer {
+      text-align: center;
+      border-top: 1px solid var(--line);
+      padding: 30px 20px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .footer strong {
+      color: #ffffff;
+    }
+
+    .values {
+      margin-top: 10px;
+      color: #ff5555;
+      font-weight: bold;
+    }
+
+    @media (max-width: 600px) {
+      .hero {
+        padding-top: 45px;
+      }
+
+      .content {
+        padding-left: 14px;
+        padding-right: 14px;
+      }
+
+      .rule {
+        padding: 18px;
+      }
+
+      .back {
+        font-size: 12px;
+        padding: 8px 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="topbar">
+    <nav class="nav">
+      <a class="logo" href="index.html">KODEX<span> RP</span></a>
+      <a class="back" href="index.html">← NAZAD NA POČETNU</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="tag">KODEX RP COMMUNITY</div>
+    <h1>📜 DISCORD <span>PRAVILA</span></h1>
+    <p class="intro">
+      Dobrodošli na KodexRP Discord. Ova pravila su napravljena
+      kako bi se održala pozitivna, organizovana i prijatna atmosfera
+      za sve članove zajednice. Ulaskom na server prihvatate navedena
+      pravila i obavezujete se da ćete ih poštovati.
+    </p>
+  </section>
+
+  <main class="content">
+    <div class="notice">
+      <strong>⚠️ Važno:</strong>
+      Pročitajte sva pravila. Nepoznavanje pravila ne oslobađa
+      odgovornosti za njihovo kršenje.
+    </div>
+
+    <section class="rule">
+      <h2><span class="number">01.</span> Poštovanje svih članova</h2>
+      <p>Svaki član servera mora pokazati međusobno poštovanje bez obzira na godine, veru, nacionalnost, rasu, pol ili bilo koje drugo lično opredeljenje. Govor mržnje, diskriminacija, vređanje ili omalovažavanje po bilo kom osnovu strogo su zabranjeni i neće biti tolerisani.</p>
+    </section>
+
+    <section class="rule">
+      <h2><span class="number">02.</span> Zabranjen govor mržnje i ekstremizam</h2>
+      <p>Svaki oblik promovisanja ili podržavanja nacizma, fašizma, rasizma, ekstremističkih organizacija, simbola ili ideologija je strogo zabranjen. Objavljivanje sadržaja koji podstiče mržnju ili nasilje prema bilo kojoj grupi ljudi rezultiraće ozbiljnim sankcijama.</p>
+    </section>
+
+    <section class="rule">
+      <h2><span class="number">03.</span> Toxic ponašanje i vređanje</h2>
+      <p>Na serveru nije dozvoljeno vređanje, provociranje, omalovažavanje, ometanje drugih članova niti namerno izazivanje svađa. Očekuje se kulturna komunikacija i međusobno uvažavanje. Svaki oblik toksičnog ponašanja koji narušava atmosferu zajednice biće sankcionisan.</p>
+    </section>
+
+    <section class="rule">
+      <h2><span class="number">04.</span> Neprimeren sadržaj</h2>
+      <p>Zabranjeno je slanje provokativnih, seksualnih, uznemirujućih ili bilo kakvih neprimerenih slika, video zapisa, GIF-ova ili linkova. Server je namenjen svim članovima zajednice i sadržaj mora biti primeren.</p>
+    </section>
+
+    <section class="rule">
+      <h2><span class="number">05.</span> Reklamiranje i promocija</h2>
+      <p>Svaki vid reklamiranja drugih Discord servera, FiveM servera, društvenih mreža, YouTube kanala, Twitch kanala, proizvoda ili usluga bez prethodne dozvole administracije je strogo zabranjen.</p>
+    </section>
+
+    <section class="rule">
+      <h2><span class="number">06.</span> Poštovanje Staff tima</h2>
+      <p>Članovi Staff tima rade na održavanju reda i kvaliteta zajednice, zbog čega se od svih očekuje poštovanje njihovih odluka. Raspravljanje, vređanje, omalovažavanje ili ometanje rada administracije nije dozvoljeno, posebno u Crvenoj sobi gde se rešavaju žalbe, prijave i administrativni postupci.</p>
+    </section>
+
+    <section class="rule">
+      <h2><span class="number">07.</span> Poštovanje cele zajednice</h2>
+      <p>Svaki član je odgovoran za atmosferu na serveru. Budite ljubazni, pomozite novim članovima kada je to moguće i doprinesite stvaranju pozitivne zajednice. Nepotrebno izazivanje konflikata i stvaranje loše atmosfere neće biti tolerisano.</p>
+    </section>
+
+    <section class="rule">
+      <h2><span class="number">08.</span> Spam i korišćenje kanala</h2>
+      <p>Spamovanje poruka, bespotrebno tagovanje članova ili Staff tima, floodovanje, prekomerno korišćenje CAPS LOCK-a, kao i pisanje van namene određenih kanala nije dozvoljeno. Svaki kanal ima svoju svrhu i očekuje se da se koristi u skladu sa njegovom namenom.</p>
+    </section>
+
+    <section class="rule penalties">
+      <h2>⚠️ Kazne za kršenje pravila</h2>
+      <p>Administracija zadržava pravo da u zavisnosti od težine prekršaja izrekne upozorenje (Warn), Mute, Kick, privremeni Ban ili trajni Ban. U težim slučajevima kazna može biti izrečena bez prethodnog upozorenja.</p>
+    </section>
+
+    <section class="rule">
+      <h2>📌 Napomena</h2>
+      <p>Neznanje pravila ne oslobađa odgovornosti. Ukoliko neko pravilo nije izričito navedeno, administracija zadržava pravo da donese odluku u interesu servera i zajednice.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <strong>🔥 KODEX RP</strong>
+    <div class="values">
+      🤝 Poštovanje • ⚖️ Pravednost • 💬 Kultura • 🎭 Zajednica
+    </div>
+    <p style="margin-top: 12px;">© KODEX RP — Sva prava zadržana.</p>
+  </footer>
+</body>
+</html>
