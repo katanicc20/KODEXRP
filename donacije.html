@@ -275,6 +275,213 @@ footer {
     Pre uplate proveri sve uslove sa ovlašćenim osobljem.
     Nemoj slati podatke kartice ili lozinke putem Discord tiketa.
   </p>
+  
+<section class="custom-donations">
+  <div class="custom-heading">
+    <span>EKSKLUZIVNE OPCIJE</span>
+    <h2>KODEX <b>CUSTOM</b></h2>
+    <p>Personalizuj detalje svog lika u KODEX RP svetu.</p>
+  </div>
+
+  <div class="custom-grid">
+
+    <article class="custom-card">
+      <div class="custom-icon">📱</div>
+      <span class="custom-tag">CUSTOM OPCIJA</span>
+      <h3>Custom broj telefona</h3>
+      <div class="custom-price">20 <small>€</small></div>
+      <p>Izaberi željeni broj telefona za svog lika, u skladu sa dostupnošću na serveru.</p>
+
+      <ul>
+        <li>Personalizovan broj telefona</li>
+        <li>Provera dostupnosti broja</li>
+        <li>Realizacija nakon odobrenja administracije</li>
+      </ul>
+
+      <a class="custom-button"
+         href="TVOJ_DISCORD_INVITE_LINK"
+         target="_blank"
+         rel="noopener noreferrer">
+        🎫 ZATRAŽI PREKO TIKETA
+      </a>
+    </article>
+
+    <article class="custom-card">
+      <div class="custom-icon">🚘</div>
+      <span class="custom-tag">CUSTOM OPCIJA</span>
+      <h3>Custom registarske tablice</h3>
+      <div class="custom-price">20 <small>€</small></div>
+      <p>Predloži tekst svojih registarskih tablica i učini vozilo prepoznatljivim.</p>
+
+      <ul>
+        <li>Izbor željenog teksta tablice</li>
+        <li>Provera dostupnosti i pravila</li>
+        <li>Realizacija nakon odobrenja administracije</li>
+      </ul>
+
+      <a class="custom-button"
+         href="TVOJ_DISCORD_INVITE_LINK"
+         target="_blank"
+         rel="noopener noreferrer">
+        🎫 ZATRAŽI PREKO TIKETA
+      </a>
+    </article>
+
+  </div>
+
+  <p class="custom-note">
+    Zahtevi podležu proveri i odobrenju administracije.
+    Opcije se realizuju samo ako ih server tehnički podržava.
+    Donacija ne garantuje odobrenje svakog zahteva.
+  </p>
+</section>
+
+<style>
+.custom-donations {
+  max-width: 1000px;
+  margin: 65px auto;
+  padding: 20px;
+  color: #fff;
+}
+
+.custom-heading {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.custom-heading > span {
+  color: #ff3030;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+.custom-heading h2 {
+  font-size: clamp(30px, 5vw, 45px);
+  margin: 12px 0;
+  font-weight: 900;
+}
+
+.custom-heading h2 b {
+  color: #ff3030;
+}
+
+.custom-heading p,
+.custom-card > p {
+  color: #aaa;
+  line-height: 1.7;
+}
+
+.custom-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.custom-card {
+  padding: 30px;
+  border-radius: 15px;
+  background: linear-gradient(145deg, #191919, #0b0b0b);
+  border: 1px solid #6e1b22;
+  transition: .25s ease;
+}
+
+.custom-card:hover {
+  transform: translateY(-5px);
+  border-color: #ff3030;
+  box-shadow: 0 12px 35px #ff202018;
+}
+
+.custom-icon {
+  font-size: 35px;
+  margin-bottom: 18px;
+}
+
+.custom-tag {
+  display: inline-block;
+  color: #ff4545;
+  background: #ff303015;
+  border: 1px solid #ff303044;
+  border-radius: 5px;
+  padding: 6px 9px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.custom-card h3 {
+  font-size: 22px;
+  margin: 18px 0 10px;
+}
+
+.custom-price {
+  font-size: 38px;
+  font-weight: 900;
+  margin: 15px 0;
+}
+
+.custom-price small {
+  color: #ff3030;
+  font-size: 23px;
+}
+
+.custom-card ul {
+  list-style: none;
+  margin: 22px 0;
+}
+
+.custom-card li {
+  color: #ddd;
+  font-size: 13px;
+  line-height: 1.6;
+  padding: 9px 0;
+  border-bottom: 1px solid #ffffff12;
+}
+
+.custom-card li::before {
+  content: "✓";
+  color: #ff3030;
+  font-weight: 900;
+  margin-right: 10px;
+}
+
+.custom-button {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background: #d71920;
+  padding: 14px 12px;
+  border-radius: 7px;
+  font-size: 12px;
+  font-weight: 900;
+  transition: .2s;
+}
+
+.custom-button:hover {
+  background: #a80e16;
+  transform: scale(1.02);
+}
+
+.custom-note {
+  text-align: center;
+  color: #888;
+  font-size: 12px;
+  line-height: 1.7;
+  margin-top: 25px;
+}
+
+@media (max-width: 650px) {
+  .custom-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .custom-card {
+    padding: 23px;
+  }
+}
+</style>
+
 </main>
 
 <footer>
