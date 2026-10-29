@@ -421,6 +421,89 @@ button, .btn, .button {
   color: #ffffff !important;
 }
 
+/* KODEX RP — glatke animacije */
+
+/* Glatko pomeranje po stranici */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Blagi prelazi za dugmad i linkove */
+button,
+.button,
+.nav-links a {
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease,
+    background-color 0.25s ease;
+}
+
+/* Crveni sjaj pri prelasku mišem */
+button:hover,
+.button:hover {
+  box-shadow: 0 0 18px rgba(255, 30, 30, 0.28);
+  transform: translateY(-2px);
+}
+
+/* Diskretno podizanje kartica */
+.card,
+.feature-card,
+.rule {
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.card:hover,
+.feature-card:hover,
+.rule:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(230, 0, 0, 0.12);
+  border-color: rgba(255, 40, 40, 0.45);
+}
+
+/* Animacija pojavljivanja */
+@keyframes kodexAppear {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero h1,
+.hero p,
+.hero .button {
+  animation: kodexAppear 0.7s ease both;
+}
+
+.hero p {
+  animation-delay: 0.12s;
+}
+
+.hero .button {
+  animation-delay: 0.22s;
+}
+
+/* Bez animacija za korisnike koji ih isključe */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
   </style>
 </head>
 
