@@ -4,509 +4,558 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#080a12">
-  <meta name="description" content="KODEX RP — nova priča, nova pravila. Pripremi se za novo FiveM Roleplay iskustvo.">
-  <title>KODEX RP | Nova priča počinje</title>
+  <meta name="theme-color" content="#080b14">
+  <meta name="description" content="KODEX RP — Tvoja priča. Tvoj grad. Tvoja pravila. Pridruži se našoj FiveM Roleplay zajednici.">
+  <title>KODEX RP | Tvoja priča počinje ovde</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --bg: #080a12;
-      --panel: #101321;
-      --text: #f5f6ff;
-      --muted: #a4abc2;
-      --blue: #6285ff;
-      --purple: #a16bff;
+      --bg: #080b14;
+      --panel: #101625;
+      --blue: #4d7cff;
+      --purple: #9065ff;
+      --white: #f6f8ff;
+      --muted: #a0abc2;
       --line: rgba(255,255,255,.10);
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+
+    html { scroll-behavior: smooth; }
+
     body {
       background: var(--bg);
-      color: var(--text);
-      font-family: Inter, Arial, sans-serif;
+      color: var(--white);
+      font-family: 'Inter', sans-serif;
       line-height: 1.6;
-      overflow-x: hidden;
-    }
-    a { color: inherit; text-decoration: none; }
-    button { font: inherit; }
-    .container { width: min(1120px, 90%); margin: auto; }
-    .accent {
-      background: linear-gradient(100deg, #7ca0ff, #b78aff);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
     }
 
-    /* Navigacija */
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; }
+
+    .container {
+      width: min(1160px, 90%);
+      margin: auto;
+    }
+
     header {
-      position: fixed;
-      inset: 0 0 auto;
-      z-index: 10;
-      background: rgba(8,10,18,.82);
-      backdrop-filter: blur(16px);
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(8,11,20,.88);
+      backdrop-filter: blur(18px);
       border-bottom: 1px solid var(--line);
     }
+
     nav {
-      min-height: 76px;
+      min-height: 78px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 24px;
     }
-    .brand {
-      font: 800 21px Orbitron, sans-serif;
-      letter-spacing: 1px;
-    }
-    .brand span { color: var(--blue); }
-    .nav-links { display: flex; align-items: center; gap: 25px; }
-    .nav-links a {
-      font-size: 13px;
-      font-weight: 600;
-      color: var(--muted);
-      transition: color .2s;
-    }
-    .nav-links a:hover { color: white; }
-    .menu-toggle {
-      display: none;
-      background: transparent;
-      color: white;
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      padding: 8px 12px;
-      cursor: pointer;
+
+    .logo {
+      font-size: 25px;
+      font-weight: 900;
+      letter-spacing: 2px;
     }
 
-    /* Dugmad */
-    .btn {
-      display: inline-flex;
-      justify-content: center;
+    .logo span {
+      color: var(--blue);
+    }
+
+    .nav-links {
+      display: flex;
       align-items: center;
+      gap: 30px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .nav-links a:hover { color: white; }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       gap: 9px;
-      padding: 13px 21px;
+      padding: 14px 22px;
+      border: 1px solid transparent;
       border-radius: 9px;
       font-size: 13px;
       font-weight: 800;
-      border: 1px solid transparent;
-      transition: transform .2s, box-shadow .2s, background .2s;
+      transition: .2s ease;
       cursor: pointer;
     }
-    .btn:hover { transform: translateY(-2px); }
-    .btn-primary {
+
+    .button-primary {
       color: white;
-      background: linear-gradient(110deg, #5278ff, #8b65f5);
-      box-shadow: 0 8px 30px rgba(98,133,255,.22);
-    }
-    .btn-secondary {
-      border-color: var(--line);
-      background: rgba(255,255,255,.035);
-      color: white;
+      background: linear-gradient(110deg, var(--blue), var(--purple));
+      box-shadow: 0 8px 30px rgba(77,124,255,.18);
     }
 
-    /* Naslovna */
-    .hero {
-      min-height: 760px;
-      min-height: 100svh;
-      position: relative;
-      display: grid;
-      align-items: center;
-      padding: 145px 0 85px;
-      overflow: hidden;
-      background:
-        linear-gradient(90deg, rgba(8,10,18,.98) 0%, rgba(8,10,18,.82) 48%, rgba(8,10,18,.35) 100%),
-        linear-gradient(0deg, var(--bg) 0%, transparent 35%),
-        url("https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=2000&q=85") center/cover;
+    .button-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 35px rgba(77,124,255,.32);
     }
-    .hero::before {
+
+    .button-outline {
+      border-color: rgba(255,255,255,.2);
+      background: rgba(255,255,255,.04);
+    }
+
+    .button-outline:hover { background: rgba(255,255,255,.10); }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      min-height: 650px;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(90deg, rgba(8,11,20,.98) 0%, rgba(8,11,20,.84) 48%, rgba(8,11,20,.32) 100%),
+        linear-gradient(0deg, var(--bg), transparent 35%),
+        url('https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=2000&q=85') center 45%/cover;
+    }
+
+    .hero::after {
       content: "";
       position: absolute;
-      width: 460px;
-      height: 460px;
-      right: 5%;
-      top: 22%;
-      border-radius: 50%;
-      background: rgba(91,105,255,.14);
+      width: 360px;
+      height: 360px;
+      top: 15%;
+      right: 8%;
+      background: rgba(77,124,255,.16);
       filter: blur(100px);
       pointer-events: none;
     }
-    .hero-content { position: relative; max-width: 720px; }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 720px;
+      padding: 95px 0;
+    }
+
     .eyebrow {
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      border: 1px solid rgba(124,160,255,.3);
-      background: rgba(98,133,255,.08);
-      border-radius: 30px;
-      padding: 8px 13px;
-      color: #c5d1ff;
-      font-size: 11px;
-      font-weight: 800;
-      letter-spacing: 1.4px;
-      text-transform: uppercase;
-    }
-    .eyebrow::before {
-      content: "";
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: #9d86ff;
-      box-shadow: 0 0 12px #9d86ff;
-    }
-    h1 {
-      margin: 25px 0 18px;
-      font: 900 clamp(43px, 8vw, 88px)/1.08 Orbitron, sans-serif;
-      letter-spacing: -3px;
-    }
-    .hero p { max-width: 580px; color: #b8bfd3; font-size: 16px; }
-    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
-    .hero-note { margin-top: 23px; color: #9da5bc; font-size: 12px; }
-
-    /* Status */
-    .status-wrap { position: relative; z-index: 2; margin-top: -38px; }
-    .status-bar {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      background: rgba(16,19,33,.96);
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      overflow: hidden;
-      backdrop-filter: blur(15px);
-    }
-    .status-item { padding: 22px; text-align: center; }
-    .status-item + .status-item { border-left: 1px solid var(--line); }
-    .status-item strong { display: block; font-size: 14px; }
-    .status-item span { color: var(--muted); font-size: 11px; }
-
-    /* Opšti odeljci */
-    section { padding: 100px 0; }
-    .section-heading { max-width: 680px; margin: 0 auto 42px; text-align: center; }
-    .kicker {
-      color: #91a7ff;
+      padding: 8px 12px;
+      border: 1px solid rgba(120,155,255,.3);
+      border-radius: 6px;
+      background: rgba(77,124,255,.09);
+      color: #a9c0ff;
       font-size: 11px;
       font-weight: 800;
       letter-spacing: 2px;
       text-transform: uppercase;
     }
-    h2 {
-      margin: 12px 0;
-      font: 800 clamp(27px, 4vw, 43px)/1.2 Orbitron, sans-serif;
-      letter-spacing: -1px;
-    }
-    .section-heading p { color: var(--muted); font-size: 14px; }
 
-    /* Kartice */
-    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-    .card {
+    .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #70e6a3;
+      box-shadow: 0 0 12px #70e6a3;
+    }
+
+    h1 {
+      margin: 25px 0 18px;
+      font-size: clamp(48px, 8vw, 91px);
+      line-height: .99;
+      font-weight: 900;
+      letter-spacing: -5px;
+    }
+
+    h1 span {
+      display: block;
+      color: var(--blue);
+      text-shadow: 0 0 45px rgba(77,124,255,.25);
+    }
+
+    .hero p {
+      max-width: 530px;
+      color: #c0c8da;
+      font-size: 16px;
+      line-height: 1.9;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+      margin-top: 30px;
+    }
+
+    .hero-note {
+      margin-top: 24px;
+      color: #8c98b1;
+      font-size: 12px;
+    }
+
+    section { padding: 90px 0; }
+
+    .section-heading {
+      max-width: 650px;
+      margin-bottom: 38px;
+    }
+
+    .section-heading small {
+      color: #8eacff;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      margin: 10px 0 13px;
+      font-size: clamp(30px, 4vw, 46px);
+      line-height: 1.15;
+      letter-spacing: -1.5px;
+    }
+
+    .section-heading p,
+    .about-text p {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.9;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .feature-card {
       padding: 27px;
       border: 1px solid var(--line);
       border-radius: 13px;
-      background: linear-gradient(145deg, rgba(22,26,44,.92), rgba(12,14,24,.92));
-      transition: transform .25s, border-color .25s;
+      background: linear-gradient(145deg, #111827, #0c101b);
+      transition: .25s ease;
     }
-    .card:hover { transform: translateY(-5px); border-color: rgba(124,160,255,.45); }
-    .card-icon {
-      width: 46px;
-      height: 46px;
+
+    .feature-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(100,140,255,.45);
+    }
+
+    .feature-icon {
       display: grid;
       place-items: center;
-      border-radius: 12px;
-      background: rgba(98,133,255,.12);
-      border: 1px solid rgba(98,133,255,.18);
-      color: #a9baff;
+      width: 48px;
+      height: 48px;
+      margin-bottom: 22px;
+      border: 1px solid rgba(105,140,255,.22);
+      border-radius: 11px;
+      background: rgba(77,124,255,.12);
       font-size: 22px;
-      margin-bottom: 20px;
     }
-    .card h3 { font-size: 16px; margin-bottom: 9px; }
-    .card p { color: var(--muted); font-size: 13px; }
 
-    /* O serveru */
+    .feature-card h3 {
+      margin-bottom: 10px;
+      font-size: 17px;
+    }
+
+    .feature-card p {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.85;
+    }
+
+    .about {
+      background: linear-gradient(180deg, transparent, rgba(77,124,255,.045), transparent);
+    }
+
     .about-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 45px;
+      gap: 65px;
       align-items: center;
     }
-    .about-copy p { color: var(--muted); font-size: 14px; margin: 17px 0; }
+
     .about-visual {
-      min-height: 330px;
+      min-height: 340px;
+      display: flex;
+      align-items: end;
+      padding: 28px;
       border: 1px solid var(--line);
       border-radius: 16px;
-      padding: 30px;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
       background:
-        linear-gradient(0deg, rgba(8,10,18,.95), rgba(8,10,18,.12)),
-        url("https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=1000&q=80") center/cover;
+        linear-gradient(0deg, rgba(8,11,20,.96), rgba(8,11,20,.05)),
+        url('https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=1000&q=80') center/cover;
     }
-    .about-visual strong { font: 800 28px Orbitron, sans-serif; }
-    .about-visual span { color: #c4c9dc; font-size: 12px; }
 
-    /* Pravila */
-    .rules-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-    .rule {
-      display: flex;
-      gap: 15px;
-      padding: 21px;
-      background: var(--panel);
-      border: 1px solid var(--line);
-      border-radius: 11px;
+    .visual-label {
+      padding-left: 15px;
+      border-left: 3px solid var(--blue);
     }
-    .rule-number { font: 800 21px Orbitron, sans-serif; color: #849bff; }
-    .rule h3 { font-size: 14px; margin-bottom: 5px; }
-    .rule p { color: var(--muted); font-size: 12px; }
 
-    /* Prijave */
-    .join-box {
-      text-align: center;
-      padding: 58px 28px;
-      border: 1px solid rgba(124,160,255,.24);
+    .visual-label strong {
+      display: block;
+      font-size: 22px;
+    }
+
+    .visual-label span {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .about-text p { margin-bottom: 18px; }
+
+    .community {
+      padding: 65px 0;
+    }
+
+    .community-box {
+      position: relative;
+      overflow: hidden;
+      padding: 55px 30px;
+      border: 1px solid rgba(110,140,255,.24);
       border-radius: 18px;
       background:
-        radial-gradient(ellipse at top, rgba(98,133,255,.16), transparent 65%),
-        #0d1020;
-    }
-    .join-box p { max-width: 540px; margin: 12px auto 25px; color: var(--muted); font-size: 14px; }
-    .coming-soon {
-      display: inline-block;
-      padding: 7px 12px;
-      border: 1px solid var(--line);
-      border-radius: 30px;
-      color: #c8d0ed;
-      font-size: 11px;
-      font-weight: 800;
-      letter-spacing: 1px;
+        radial-gradient(ellipse at 90% 0%, rgba(144,101,255,.20), transparent 45%),
+        linear-gradient(120deg, #101a32, #10101e);
+      text-align: center;
     }
 
-    /* Footer */
-    footer { border-top: 1px solid var(--line); padding: 28px 0; }
+    .community-box p {
+      max-width: 570px;
+      margin: 0 auto 25px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    footer {
+      padding: 27px 0;
+      border-top: 1px solid var(--line);
+    }
+
     .footer-inner {
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 20px;
+      flex-wrap: wrap;
     }
-    .footer-inner p, .footer-links { color: var(--muted); font-size: 11px; }
-    .footer-links { display: flex; gap: 18px; }
+
+    .footer-inner p {
+      color: #7f8ba4;
+      font-size: 11px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 20px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
     .footer-links a:hover { color: white; }
 
-    /* Animacije */
-    .reveal { animation: appear .8s ease both; }
-    @keyframes appear {
-      from { opacity: 0; transform: translateY(18px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after {
-        animation-duration: .01ms !important;
-        scroll-behavior: auto !important;
-        transition-duration: .01ms !important;
-      }
+    .menu-toggle {
+      display: none;
+      padding: 8px 11px;
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      background: var(--panel);
+      color: white;
+      cursor: pointer;
     }
 
-    /* Telefon i tablet */
     @media (max-width: 760px) {
+      nav { min-height: 70px; }
       .menu-toggle { display: block; }
+
       .nav-links {
         display: none;
         position: absolute;
-        top: 76px;
+        top: 70px;
         left: 0;
         right: 0;
         padding: 22px 5%;
-        background: #0c0e19;
         border-bottom: 1px solid var(--line);
+        background: #0b0f1b;
         flex-direction: column;
         align-items: stretch;
-        gap: 17px;
+        gap: 20px;
       }
+
       .nav-links.open { display: flex; }
-      .hero { min-height: 740px; }
-      h1 { letter-spacing: -2px; }
-      .hero p { font-size: 14px; }
-      .status-bar { grid-template-columns: 1fr; }
-      .status-item { padding: 16px; }
-      .status-item + .status-item { border-left: 0; border-top: 1px solid var(--line); }
-      section { padding: 70px 0; }
-      .cards, .about-grid, .rules-grid { grid-template-columns: 1fr; }
-      .about-grid { gap: 25px; }
+
+      .hero { min-height: 590px; }
+      h1 { letter-spacing: -3px; }
+
+      .features { grid-template-columns: 1fr; }
+      .about-grid { grid-template-columns: 1fr; gap: 32px; }
       .about-visual { min-height: 260px; }
-      .footer-inner { flex-direction: column; text-align: center; }
+      section { padding: 65px 0; }
+      .hero-actions .button { width: 100%; }
+      .community-box { padding: 40px 20px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition: none !important; }
     }
   </style>
 </head>
 
 <body>
   <header>
-    <div class="container">
-      <nav aria-label="Glavna navigacija">
-        <a class="brand" href="#pocetna" aria-label="KODEX RP početna">
-          KODEX <span>RP</span>
-        </a>
+    <nav class="container">
+      <a class="logo" href="#home">KODEX<span> RP</span></a>
 
-        <button class="menu-toggle" id="menuToggle"
-          aria-expanded="false" aria-controls="navLinks" aria-label="Otvori meni">
-          ☰
-        </button>
+      <button class="menu-toggle" id="menuToggle"
+        aria-label="Otvori meni" aria-expanded="false">☰</button>
 
-        <div class="nav-links" id="navLinks">
-          <a href="#pocetna">Početna</a>
-          <a href="#o-serveru">O serveru</a>
-          <a href="#iskustvo">Iskustvo</a>
-          <a href="#pravila">Pravila</a>
-          <a href="#pridruzi-se">Pridruži se</a>
-        </div>
-      </nav>
-    </div>
+      <div class="nav-links" id="navLinks">
+        <a href="#home">POČETNA</a>
+        <a href="#features">ISKUSTVO</a>
+        <a href="#about">O NAMA</a>
+        <a href="#community">ZAJEDNICA</a>
+        <a class="button button-primary" href="#community">PRIDRUŽI SE ↗</a>
+      </div>
+    </nav>
   </header>
 
   <main>
-    <section class="hero" id="pocetna">
+    <section class="hero" id="home">
       <div class="container">
-        <div class="hero-content reveal">
-          <span class="eyebrow">Nova RP priča uskoro počinje</span>
-          <h1>OVDE POČINJE<br><span class="accent">TVOJA PRIČA.</span></h1>
+        <div class="hero-content">
+          <div class="eyebrow">
+            <span class="dot"></span>
+            TVOJA NOVA RP PRIČA
+          </div>
+
+          <h1>TVAJA PRIČA.<span>KODEX RP.</span></h1>
+
           <p>
-            Dobrodošao u KODEX RP. Izgradi svoj identitet, upoznaj nove ljude
-            i napiši priču po kojoj će te grad pamtiti.
-            Tvoja sledeća avantura tek dolazi.
+            Izgradi svoj identitet, upoznaj nove ljude i napiši svoju priču.
+            Tvoj grad. Tvoje odluke. Tvoj svet.
+            Dobrodošao u KODEX Roleplay.
           </p>
 
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#pridruzi-se">SAZNAJ VIŠE ↗</a>
-            <a class="btn btn-secondary" href="#o-serveru">UPOZNAJ KODEX</a>
+            <a class="button button-primary" href="#community">
+              PRIDRUŽI SE ZAJEDNICI ↗
+            </a>
+            <a class="button button-outline" href="#features">
+              ISTRAŽI SERVER ↓
+            </a>
           </div>
 
-          <p class="hero-note">✦ Server se priprema za otvaranje. Više informacija uskoro.</p>
+          <div class="hero-note">
+            FiveM Roleplay zajednica · Tvoja priča počinje ovde
+          </div>
         </div>
       </div>
     </section>
 
-    <div class="container status-wrap">
-      <div class="status-bar">
-        <div class="status-item">
-          <strong>USKORO</strong>
-          <span>Otvaranje servera</span>
-        </div>
-        <div class="status-item">
-          <strong>FIVE M</strong>
-          <span>Roleplay zajednica</span>
-        </div>
-        <div class="status-item">
-          <strong>KODEX RP</strong>
-          <span>Nova priča počinje</span>
-        </div>
-      </div>
-    </div>
-
-    <section id="iskustvo">
+    <section id="features">
       <div class="container">
         <div class="section-heading">
-          <span class="kicker">Više od igre</span>
-          <h2>IZGRADI SVOJ <span class="accent">IDENTITET</span></h2>
-          <p>Uđi u grad sa svojim ciljevima. Svaka odluka može postati deo tvoje priče.</p>
+          <small>ZAŠTO KODEX RP?</small>
+          <h2>VIŠE OD IGRE.<br>TVAJA NOVA PRIČA.</h2>
+          <p>
+            Uđi u svet u kom tvoje odluke imaju značaj.
+            Napravi svoj put i postani deo zajednice koja živi Roleplay.
+          </p>
         </div>
 
-        <div class="cards">
-          <article class="card">
-            <div class="card-icon">⌘</div>
+        <div class="features">
+          <article class="feature-card">
+            <div class="feature-icon">◈</div>
             <h3>Realističan Roleplay</h3>
-            <p>Razvijaj karakter, upoznaj druge igrače i stvaraj priče kroz kvalitetnu interakciju.</p>
+            <p>
+              Razvij svoj lik, upoznaj različite karaktere i stvori priču
+              koja se razvija kroz tvoje odluke.
+            </p>
           </article>
-          <article class="card">
-            <div class="card-icon">⚡</div>
-            <h3>Akcija i izazovi</h3>
-            <p>Pripremi se za nepredvidive situacije, timski rad i odluke koje nose posledice.</p>
+
+          <article class="feature-card">
+            <div class="feature-icon">⌘</div>
+            <h3>Različiti putevi</h3>
+            <p>
+              Izaberi svoj pravac, postavi ciljeve i pronađi svoje mesto
+              u gradu kroz jedinstvene RP situacije.
+            </p>
           </article>
-          <article class="card">
-            <div class="card-icon">◈</div>
-            <h3>Zajednica</h3>
-            <p>Upoznaj ljude, pronađi svoje mesto u gradu i postani deo priče KODEX RP.</p>
+
+          <article class="feature-card">
+            <div class="feature-icon">✦</div>
+            <h3>Aktivna zajednica</h3>
+            <p>
+              Upoznaj nove igrače, učestvuj u događajima i zajedno
+              stvarajte trenutke za pamćenje.
+            </p>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="o-serveru">
+    <section class="about" id="about">
       <div class="container about-grid">
-        <div class="about-copy">
-          <span class="kicker">Dobrodošao u grad</span>
-          <h2>OVO JE <span class="accent">KODEX RP</span></h2>
-          <p>
-            KODEX RP je FiveM Roleplay projekat koji se priprema za svoje
-            otvaranje. Cilj nam je da izgradimo aktivnu zajednicu u kojoj
-            priče nastaju kroz odluke, saradnju i kreativnost igrača.
-          </p>
-          <p>
-            Detalji o organizacijama, sistemima i početku rada biće objavljeni
-            kako pripreme budu napredovale.
-          </p>
-          <a class="btn btn-secondary" href="#pridruzi-se">PRATI PRIPREME ↗</a>
-        </div>
         <div class="about-visual">
-          <strong>KODEX RP</strong>
-          <span>Tvoja odluka. Tvoja priča. Tvoj grad.</span>
-        </div>
-      </div>
-    </section>
-
-    <section id="pravila">
-      <div class="container">
-        <div class="section-heading">
-          <span class="kicker">Poštovanje na prvom mestu</span>
-          <h2>OSNOVE NAŠE <span class="accent">ZAJEDNICE</span></h2>
-          <p>Ovo su početne smernice. Zvaničan pravilnik biće objavljen pre otvaranja servera.</p>
+          <div class="visual-label">
+            <strong>KODEX ROLEPLAY</strong>
+            <span>Svaka odluka piše novu stranicu.</span>
+          </div>
         </div>
 
-        <div class="rules-grid">
-          <article class="rule">
-            <span class="rule-number">01</span>
-            <div>
-              <h3>Poštuj druge igrače</h3>
-              <p>Komuniciraj pristojno i doprinesi prijatnoj atmosferi zajednice.</p>
-            </div>
-          </article>
-          <article class="rule">
-            <span class="rule-number">02</span>
-            <div>
-              <h3>Čuvaj kvalitet Roleplaya</h3>
-              <p>Odvajaj ponašanje svog lika od ponašanja van igre i poštuj RP situacije.</p>
-            </div>
-          </article>
-          <article class="rule">
-            <span class="rule-number">03</span>
-            <div>
-              <h3>Poštuj pravila servera</h3>
-              <p>Pročitaj zvaničan pravilnik kada bude objavljen i prati instrukcije administracije.</p>
-            </div>
-          </article>
-          <article class="rule">
-            <span class="rule-number">04</span>
-            <div>
-              <h3>Igraj fer</h3>
-              <p>Ne koristi nedozvoljene prednosti i ne narušavaj iskustvo drugih igrača.</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
+        <div class="about-text">
+          <div class="section-heading">
+            <small>NAŠA PRIČA</small>
+            <h2>GRAD JE TVOJ.<br>ŠTA ĆEŠ POSTATI?</h2>
+          </div>
 
-    <section id="pridruzi-se">
-      <div class="container">
-        <div class="join-box">
-          <span class="coming-soon">PRIPREME SU U TOKU</span>
-          <h2>GRAD TE <span class="accent">ČEKA.</span></h2>
           <p>
-            KODEX RP se priprema za otvaranje. Discord zajednica,
-            informacije o povezivanju i detalji o početku rada biće dodati ovde.
+            KODEX RP je zamišljen kao mesto za igrače koji žele da
+            stvaraju zanimljive likove, kvalitetne situacije i priče
+            koje se pamte.
           </p>
-          <span class="btn btn-secondary">DISCORD — USKORO</span>
-          <p style="font-size:11px;margin-bottom:0;">
-            IP adresa i datum otvaranja biće objavljeni naknadno.
+
+          <p>
+            Bilo da tek počinješ ili već imaš iskustva u Roleplay-u,
+            ovde je najvažnije da poštuješ druge igrače i doprineseš
+            dobroj atmosferi zajednice.
+          </p>
+
+          <a class="button button-outline" href="#community">
+            UPOZNAJ ZAJEDNICU ↗
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="community" id="community">
+      <div class="container">
+        <div class="community-box">
+          <div class="eyebrow">TVOJ SLEDEĆI KORAK</div>
+          <h2>SPREMAN ZA KODEX RP?</h2>
+          <p>
+            Prati novosti, upoznaj zajednicu i saznaj kada možeš
+            da započneš svoju priču u gradu.
+          </p>
+
+          <!-- ZAMENI LINK ISPOD SVOJOM DISCORD POZIVNICOM -->
+          <a class="button button-primary"
+             href="https://discord.com/"
+             target="_blank" rel="noopener noreferrer">
+            PRIDRUŽI SE DISCORDU ↗
+          </a>
+
+          <p style="margin-top:18px;margin-bottom:0;font-size:11px;">
+            Status servera i povezivanje biće dodati kada unesemo
+            podatke tvog FiveM servera.
           </p>
         </div>
       </div>
@@ -515,37 +564,38 @@
 
   <footer>
     <div class="container footer-inner">
-      <a class="brand" href="#pocetna">KODEX <span>RP</span></a>
+      <a class="logo" href="#home">KODEX<span> RP</span></a>
+
       <p>© <span id="year"></span> KODEX RP. Sva prava zadržana.</p>
+
       <div class="footer-links">
-        <a href="#pocetna">Početna</a>
-        <a href="#pravila">Pravila</a>
-        <a href="#pridruzi-se">Kontakt</a>
+        <a href="#features">Iskustvo</a>
+        <a href="#about">O nama</a>
+        <a href="#community">Discord</a>
       </div>
     </div>
   </footer>
 
   <script>
-    const menuToggle = document.getElementById("menuToggle");
-    const navLinks = document.getElementById("navLinks");
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
 
-    menuToggle.addEventListener("click", () => {
-      const isOpen = navLinks.classList.toggle("open");
-      menuToggle.setAttribute("aria-expanded", String(isOpen));
-      menuToggle.setAttribute("aria-label", isOpen ? "Zatvori meni" : "Otvori meni");
-      menuToggle.textContent = isOpen ? "✕" : "☰";
+    menuToggle.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', isOpen);
+      menuToggle.textContent = isOpen ? '✕' : '☰';
     });
 
-    navLinks.querySelectorAll("a").forEach(link => {
-      link.addEventListener("click", () => {
-        navLinks.classList.remove("open");
-        menuToggle.setAttribute("aria-expanded", "false");
-        menuToggle.setAttribute("aria-label", "Otvori meni");
-        menuToggle.textContent = "☰";
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.textContent = '☰';
       });
     });
 
-    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById('year').textContent =
+      new Date().getFullYear();
   </script>
 </body>
 </html>
