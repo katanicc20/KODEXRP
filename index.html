@@ -648,6 +648,245 @@ h1 {
   }
 }
 
+/* =====================================
+   KODEX RP — PREMIUM RED & WHITE
+===================================== */
+
+:root {
+  --bg: #080808;
+  --panel: #111111;
+  --blue: #ff2424;
+  --purple: #c90000;
+  --white: #ffffff;
+  --muted: #bdbdbd;
+  --line: rgba(255,255,255,.10);
+}
+
+/* POZADINA I NAVIGACIJA */
+
+body {
+  background: #080808 !important;
+}
+
+header {
+  background: rgba(5,5,5,.94) !important;
+  border-bottom: 1px solid rgba(255,35,35,.22);
+  box-shadow: 0 8px 30px rgba(0,0,0,.35);
+}
+
+.logo span {
+  color: #ff2929 !important;
+  text-shadow: 0 0 18px rgba(255,0,0,.35);
+}
+
+.nav-links a:not(.button) {
+  color: #d0d0d0 !important;
+  transition: .25s ease;
+}
+
+.nav-links a:not(.button):hover {
+  color: #ff2929 !important;
+}
+
+/* GLAVNA POZADINA */
+
+.hero {
+  background:
+    linear-gradient(90deg,
+      rgba(0,0,0,.97) 0%,
+      rgba(0,0,0,.83) 48%,
+      rgba(0,0,0,.38) 100%),
+    linear-gradient(0deg, #080808, transparent 45%),
+    url('./kodex-bg.png') center 45%/cover !important;
+}
+
+.hero::after {
+  background: rgba(255,0,0,.19) !important;
+}
+
+.eyebrow {
+  color: #ff5555 !important;
+  background: rgba(255,30,30,.07) !important;
+  border-color: rgba(255,50,50,.3) !important;
+}
+
+h1 {
+  color: #ffffff !important;
+  text-shadow: 0 0 25px rgba(255,255,255,.08) !important;
+}
+
+h1 span {
+  color: #ff2929 !important;
+  text-shadow: 0 0 35px rgba(255,0,0,.32) !important;
+}
+
+.hero p {
+  color: #d0d0d0 !important;
+}
+
+/* PREMIUM DUGMAD */
+
+.button-primary {
+  background: linear-gradient(110deg,#ff2929,#b90000) !important;
+  border: 1px solid rgba(255,100,100,.35);
+  box-shadow: 0 8px 28px rgba(255,0,0,.20);
+}
+
+.button-primary:hover {
+  box-shadow: 0 0 25px rgba(255,0,0,.45);
+  transform: translateY(-3px);
+}
+
+.button-outline {
+  background: rgba(255,255,255,.035) !important;
+  border: 1px solid rgba(255,255,255,.23) !important;
+  color: #ffffff !important;
+}
+
+.button-outline:hover {
+  background: rgba(255,255,255,.10) !important;
+  border-color: #ff2929 !important;
+}
+
+/* NASLOVI SEKCIJA */
+
+.section-heading small {
+  color: #ff4444 !important;
+}
+
+.section-heading h2,
+.about-text h2,
+.community-box h2 {
+  color: #ffffff !important;
+}
+
+.section-heading p,
+.about-text p {
+  color: #bdbdbd !important;
+}
+
+/* PREMIUM KARTICE */
+
+.feature-card {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(145deg,#171717,#0b0b0b) !important;
+  border: 1px solid rgba(255,255,255,.09);
+  border-radius: 15px;
+  transition: .3s ease;
+}
+
+.feature-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg,transparent,#ff2929,transparent);
+  opacity: .65;
+}
+
+.feature-card:hover {
+  transform: translateY(-7px);
+  border-color: rgba(255,40,40,.45);
+  box-shadow: 0 15px 40px rgba(255,0,0,.10);
+}
+
+.feature-icon {
+  color: #ff3333 !important;
+  background: rgba(255,30,30,.09) !important;
+  border-color: rgba(255,40,40,.25) !important;
+}
+
+.feature-card h3 {
+  color: #ffffff !important;
+}
+
+.feature-card p {
+  color: #bdbdbd !important;
+}
+
+/* O NAMA */
+
+.about {
+  background: linear-gradient(
+    180deg,
+    transparent,
+    rgba(255,0,0,.035),
+    transparent
+  ) !important;
+}
+
+.about-visual {
+  border-color: rgba(255,40,40,.25) !important;
+  box-shadow: 0 15px 45px rgba(0,0,0,.4);
+}
+
+.visual-label {
+  border-left-color: #ff2929 !important;
+}
+
+/* DISCORD SEKCIJA */
+
+.community-box {
+  background:
+    radial-gradient(
+      ellipse at 90% 0%,
+      rgba(255,0,0,.17),
+      transparent 48%
+    ),
+    linear-gradient(120deg,#171111,#090909) !important;
+  border-color: rgba(255,45,45,.28) !important;
+  box-shadow: 0 15px 45px rgba(0,0,0,.3);
+}
+
+.community-box p {
+  color: #c5c5c5 !important;
+}
+
+/* STATUS SERVERA */
+
+.server-status-card {
+  background: linear-gradient(135deg,#191919,#090909) !important;
+  border-color: rgba(255,40,40,.35) !important;
+  box-shadow: 0 15px 40px rgba(0,0,0,.35);
+}
+
+/* FOOTER */
+
+footer {
+  background: #060606;
+  border-top-color: rgba(255,255,255,.10);
+}
+
+.footer-inner p,
+.footer-links {
+  color: #aaa !important;
+}
+
+.footer-links a:hover {
+  color: #ff2929 !important;
+}
+
+/* ANIMACIJE */
+
+.feature-card,
+.button,
+.about-visual,
+.server-status-card {
+  transition: all .3s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+  }
+}
+
   </style>
 </head>
 
@@ -822,7 +1061,7 @@ h1 {
 
           <!-- ZAMENI LINK ISPOD SVOJOM DISCORD POZIVNICOM -->
           <a class="button button-primary"
-             href="https://discord.com/"
+            href="https://discord.com/"
              target="_blank" rel="noopener noreferrer">
             PRIDRUŽI SE DISCORDU ↗
           </a>
