@@ -1,370 +1,4 @@
 
-<!DOCTYPE html>
-<html lang="sr">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KODEX RP | Donacije</title>
-
-<style>
-:root {
-  --red: #ff2020;
-  --dark-red: #a80000;
-  --bg: #080808;
-  --white: #fff;
-  --muted: #bdbdbd;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  color: var(--white);
-  background: radial-gradient(ellipse at top, #350909 0%, transparent 55%), var(--bg);
-  min-height: 100vh;
-}
-
-header {
-  padding: 22px 8%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid #ffffff15;
-  background: #080808dd;
-}
-
-.logo {
-  font-size: 25px;
-  font-weight: 900;
-  letter-spacing: 2px;
-}
-
-.logo span {
-  color: var(--red);
-}
-
-header a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-header a:hover {
-  color: var(--red);
-}
-
-main {
-  width: min(1000px, 90%);
-  margin: 70px auto;
-  text-align: center;
-}
-
-.tag {
-  display: inline-block;
-  color: var(--red);
-  border: 1px solid #ff202055;
-  background: #ff202010;
-  padding: 9px 16px;
-  border-radius: 30px;
-  font-size: 12px;
-  letter-spacing: 2px;
-  font-weight: bold;
-}
-
-h1 {
-  font-size: clamp(38px, 7vw, 68px);
-  margin: 25px 0 15px;
-  font-weight: 900;
-}
-
-h1 span {
-  color: var(--red);
-  text-shadow: 0 0 25px #ff202044;
-}
-
-.intro {
-  max-width: 650px;
-  margin: 0 auto;
-  color: var(--muted);
-  line-height: 1.8;
-}
-
-.card {
-  margin: 40px auto;
-  padding: 38px 28px;
-  max-width: 650px;
-  background: linear-gradient(145deg, #191919, #0d0d0d);
-  border: 1px solid #ff20204d;
-  border-radius: 18px;
-  box-shadow: 0 15px 50px #0008;
-  transition: .3s;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  border-color: var(--red);
-}
-
-.discord-icon {
-  font-size: 48px;
-  margin-bottom: 18px;
-}
-
-h2 {
-  font-size: 27px;
-  margin-bottom: 14px;
-}
-
-.card p {
-  color: var(--muted);
-  line-height: 1.8;
-}
-
-.button {
-  display: inline-block;
-  margin-top: 25px;
-  padding: 16px 25px;
-  background: var(--red);
-  color: white;
-  text-decoration: none;
-  border-radius: 8px;
-  font-weight: 900;
-  transition: .25s;
-}
-
-.button:hover {
-  background: var(--dark-red);
-  transform: scale(1.04);
-}
-
-.steps {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
-  margin-top: 35px;
-  text-align: left;
-}
-
-.step {
-  background: #121212;
-  border: 1px solid #ffffff12;
-  border-radius: 12px;
-  padding: 22px;
-}
-
-.number {
-  color: var(--red);
-  font-size: 25px;
-  font-weight: 900;
-  margin-bottom: 12px;
-}
-
-.step p {
-  color: var(--muted);
-  font-size: 14px;
-  line-height: 1.7;
-  margin-top: 8px;
-}
-
-.notice {
-  color: #999;
-  font-size: 12px;
-  line-height: 1.7;
-  margin: 25px auto;
-  max-width: 750px;
-}
-
-.custom-donations {
-  max-width: 1000px;
-  margin: 65px auto;
-  padding: 20px 0;
-}
-
-.custom-heading {
-  text-align: center;
-  margin-bottom: 35px;
-}
-
-.custom-heading > span {
-  color: #ff3030;
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 3px;
-}
-
-.custom-heading h2 {
-  font-size: clamp(30px, 5vw, 45px);
-  margin: 12px 0;
-  font-weight: 900;
-}
-
-.custom-heading h2 b {
-  color: #ff3030;
-}
-
-.custom-heading p,
-.custom-card > p {
-  color: #aaa;
-  line-height: 1.7;
-}
-
-.custom-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 22px;
-}
-
-.custom-card {
-  padding: 30px;
-  border-radius: 15px;
-  background: linear-gradient(145deg, #191919, #0b0b0b);
-  border: 1px solid #6e1b22;
-  transition: .25s ease;
-  text-align: left;
-}
-
-.custom-card:hover {
-  transform: translateY(-5px);
-  border-color: #ff3030;
-  box-shadow: 0 12px 35px #ff202018;
-}
-
-.custom-icon {
-  font-size: 35px;
-  margin-bottom: 18px;
-}
-
-.custom-tag {
-  display: inline-block;
-  color: #ff4545;
-  background: #ff303015;
-  border: 1px solid #ff303044;
-  border-radius: 5px;
-  padding: 6px 9px;
-  font-size: 10px;
-  font-weight: 800;
-  letter-spacing: 1px;
-}
-
-.custom-card h3 {
-  font-size: 22px;
-  margin: 18px 0 10px;
-}
-
-.custom-price {
-  font-size: 38px;
-  font-weight: 900;
-  margin: 15px 0;
-}
-
-.custom-price small {
-  color: #ff3030;
-  font-size: 23px;
-}
-
-.custom-card ul {
-  list-style: none;
-  margin: 22px 0;
-}
-
-.custom-card li {
-  color: #ddd;
-  font-size: 13px;
-  line-height: 1.6;
-  padding: 9px 0;
-  border-bottom: 1px solid #ffffff12;
-}
-
-.custom-card li::before {
-  content: "✓";
-  color: #ff3030;
-  font-weight: 900;
-  margin-right: 10px;
-}
-
-.custom-button {
-  display: block;
-  text-align: center;
-  text-decoration: none;
-  color: #fff;
-  background: #d71920;
-  padding: 14px 12px;
-  border-radius: 7px;
-  font-size: 12px;
-  font-weight: 900;
-  transition: .2s;
-}
-
-.custom-button:hover {
-  background: #a80e16;
-  transform: scale(1.02);
-}
-
-.ticket-only {
-  display: inline-block;
-  margin: 15px 0 5px;
-  padding: 8px 11px;
-  border: 1px solid #ff303055;
-  border-radius: 6px;
-  color: #ff5555;
-  background: #ff303010;
-  font-size: 11px;
-  font-weight: 800;
-  letter-spacing: 1px;
-}
-
-.custom-note {
-  text-align: center;
-  color: #888;
-  font-size: 12px;
-  line-height: 1.7;
-  margin-top: 25px;
-}
-
-footer {
-  text-align: center;
-  padding: 25px;
-  border-top: 1px solid #ffffff12;
-  color: #777;
-  font-size: 13px;
-}
-
-@media (max-width: 650px) {
-  header {
-    padding: 20px 5%;
-  }
-
-  .steps,
-  .custom-grid {
-    grid-template-columns: 1fr;
-  }
-
-  main {
-    margin-top: 45px;
-  }
-
-  .card {
-    padding: 28px 20px;
-  }
-
-  .custom-card {
-    padding: 23px;
-  }
-}
-</style>
-</head>
-
-<body>
-
-<header>
-  <div class="logo">KODEX <span>RP</span></div>
-  <a href="index.html">← POČETNA</a>
-</header>
-
 <main>
 
   <div class="tag">PODRŽI NAŠU ZAJEDNICU</div>
@@ -385,11 +19,9 @@ footer {
       Otvori tiket, navedi da želiš da doniraš i sačekaj
       odgovor nadležnog člana osoblja.
     </p>
-
     <a class="button"
        href="https://discord.com/channels/1563942786812612628/1563995786449002679"
-       target="_blank"
-       rel="noopener noreferrer">
+       target="_blank" rel="noopener noreferrer">
       🎫 OTVORI DISCORD TIKET ↗
     </a>
   </section>
@@ -422,8 +54,9 @@ footer {
     Nemoj slati podatke kartice ili lozinke putem Discord tiketa.
   </p>
 
-  <section class="custom-donations">
+  <!-- KODEX CUSTOM -->
 
+  <section class="custom-donations">
     <div class="custom-heading">
       <span>EKSKLUZIVNE OPCIJE</span>
       <h2>KODEX <b>CUSTOM</b></h2>
@@ -438,17 +71,13 @@ footer {
         <h3>Custom broj telefona</h3>
         <div class="custom-price">20 <small>€</small></div>
         <p>Izaberi željeni broj telefona za svog lika, u skladu sa dostupnošću na serveru.</p>
-
         <ul>
           <li>Personalizovan broj telefona</li>
           <li>Provera dostupnosti broja</li>
           <li>Realizacija nakon odobrenja administracije</li>
         </ul>
-
-        <a class="custom-button"
-           href="https://discord.gg/2G4qf738A"
-           target="_blank"
-           rel="noopener noreferrer">
+        <a class="custom-button" href="https://discord.gg/2G4qf738A"
+           target="_blank" rel="noopener noreferrer">
           🎫 ZATRAŽI PREKO TIKETA
         </a>
       </article>
@@ -457,58 +86,37 @@ footer {
         <div class="custom-icon">🚘</div>
         <span class="custom-tag">POSEBNA OPCIJA</span>
         <h3>Donacija vozila</h3>
-
-        <p>
-          Želiš određeno vozilo za svog lika?
-          Pošalji zahtev našem timu i dogovori sve detalje
-          direktno preko Discord tiketa.
-        </p>
-
-        <div class="ticket-only">
-          CENA I DETALJI ISKLJUČIVO PREKO TIKETA
-        </div>
-
+        <p>Želiš određeno vozilo za svog lika? Pošalji zahtev našem timu i dogovori sve detalje direktno preko Discord tiketa.</p>
+        <div class="ticket-only">CENA I DETALJI ISKLJUČIVO PREKO TIKETA</div>
         <ul>
           <li>Dogovor oko željenog vozila</li>
           <li>Provera dostupnosti i mogućnosti</li>
           <li>Informacije o uslovima dobijaš u tiketu</li>
         </ul>
-
         <a class="custom-button"
            href="https://discord.com/channels/1563942786812612628/1563995786449002679"
-           target="_blank"
-           rel="noopener noreferrer">
+           target="_blank" rel="noopener noreferrer">
           🚘 ZATRAŽI VOZILO PREKO TIKETA
         </a>
       </article>
 
-<article class="custom-card">
-  <div class="custom-icon">🚀</div>
-  <span class="custom-tag">POSEBNA OPCIJA</span>
-  <h3>BUMP</h3>
-
-  <p>
-    Želiš da tvoj zahtev ili promocija dobije dodatnu pažnju?
-    Otvori tiket i dogovori detalje sa našim timom.
-  </p>
-
-  <div class="ticket-only">
-    CENA I DETALJI ISKLJUČIVO PREKO TIKETA
-  </div>
-
-  <ul>
-    <li>Informacije o dostupnim mogućnostima</li>
-    <li>Dogovor sa nadležnim osobljem</li>
-    <li>Detalji se potvrđuju u tiketu</li>
-  </ul>
-
-  <a class="custom-button"
-     href="https://discord.com/channels/1563942786812612628/1563995786449002679"
-     target="_blank"
-     rel="noopener noreferrer">
-    🚀 ZATRAŽI BUMP PREKO TIKETA
-  </a>
-</article>
+      <article class="custom-card">
+        <div class="custom-icon">🚀</div>
+        <span class="custom-tag">POSEBNA OPCIJA</span>
+        <h3>BUMP</h3>
+        <p>Želiš da tvoj zahtev ili promocija dobije dodatnu pažnju? Otvori tiket i dogovori detalje sa našim timom.</p>
+        <div class="ticket-only">CENA I DETALJI ISKLJUČIVO PREKO TIKETA</div>
+        <ul>
+          <li>Informacije o dostupnim mogućnostima</li>
+          <li>Dogovor sa nadležnim osobljem</li>
+          <li>Detalji se potvrđuju u tiketu</li>
+        </ul>
+        <a class="custom-button"
+           href="https://discord.com/channels/1563942786812612628/1563995786449002679"
+           target="_blank" rel="noopener noreferrer">
+          🚀 ZATRAŽI BUMP PREKO TIKETA
+        </a>
+      </article>
 
       <article class="custom-card">
         <div class="custom-icon">🔢</div>
@@ -516,17 +124,13 @@ footer {
         <h3>Custom registarske tablice</h3>
         <div class="custom-price">20 <small>€</small></div>
         <p>Predloži tekst svojih registarskih tablica i učini vozilo prepoznatljivim.</p>
-
         <ul>
           <li>Izbor željenog teksta tablice</li>
           <li>Provera dostupnosti i pravila</li>
           <li>Realizacija nakon odobrenja administracije</li>
         </ul>
-
-        <a class="custom-button"
-           href="https://discord.gg/2G4qf738A"
-           target="_blank"
-           rel="noopener noreferrer">
+        <a class="custom-button" href="https://discord.gg/2G4qf738A"
+           target="_blank" rel="noopener noreferrer">
           🎫 ZATRAŽI PREKO TIKETA
         </a>
       </article>
@@ -536,185 +140,147 @@ footer {
     <p class="custom-note">
       Zahtevi podležu proveri i odobrenju administracije.
       Opcije se realizuju samo ako ih server tehnički podržava.
-      Donacija ne garantuje odobrenje svakog zahteva.
     </p>
-
   </section>
 
-<section class="custom-donations">
+  <!-- KAFICI, RESTORANI I MEHANICARSKE RADNJE -->
 
-  <div class="custom-heading">
-    <span>UNDERGROUND SISTEM</span>
-    <h2>KODEX <b>UNDERGROUND</b></h2>
-    <p>Posebne mogućnosti za organizacije i igrače koji žele jedinstveno iskustvo na serveru.</p>
-  </div>
+  <section class="custom-donations">
+    <div class="custom-heading">
+      <span>POSLOVNE DONACIJE</span>
+      <h2>KAFIĆI <b>I RESTORANI</b></h2>
+      <p>Posebne mogućnosti za vlasnike poslovnih objekata na KODEX RP.</p>
+    </div>
 
-  <div class="custom-grid">
+    <div class="custom-grid">
 
-    <article class="custom-card">
-      <div class="custom-icon">💊</div>
-      <span class="custom-tag">UNDERGROUND OPCIJA</span>
-      <h3>Custom droge</h3>
-      <p>
-        Predloži jedinstven koncept ilegalne robe za svoj
-        RP karakter ili organizaciju.
-      </p>
-      <div class="ticket-only">
-        CENA I DETALJI ISKLJUČIVO PREKO TIKETA
-      </div>
-      <ul>
-        <li>Dogovor oko custom koncepta</li>
-        <li>Provera mogućnosti na serveru</li>
-        <li>Realizacija uz odobrenje osoblja</li>
-      </ul>
-      <a class="custom-button"
-         href="https://discord.com/channels/1563942786812612628/1563995786449002679"
-         target="_blank" rel="noopener noreferrer">
-        💊 ZATRAŽI PREKO TIKETA
-      </a>
-    </article>
+      <article class="custom-card">
+        <div class="custom-icon">☕</div>
+        <span class="custom-tag">UGOSTITELJSTVO</span>
+        <h3>Kafići</h3>
+        <p>Želiš svoj kafić u KODEX RP svetu? Pošalji zahtev našem timu.</p>
+        <div class="ticket-only">CENA I DETALJI ISKLJUČIVO PREKO TIKETA</div>
+        <ul>
+          <li>Informacije o dostupnim lokacijama</li>
+          <li>Dogovor oko uslova</li>
+          <li>Provera mogućnosti realizacije</li>
+        </ul>
+        <a class="custom-button"
+           href="https://discord.com/channels/1563942786812612628/1563995786449002679"
+           target="_blank" rel="noopener noreferrer">
+          ☕ ZATRAŽI PREKO TIKETA
+        </a>
+      </article>
 
-    <article class="custom-card">
-      <div class="custom-icon">🛠️</div>
-      <span class="custom-tag">UNDERGROUND OPCIJA</span>
-      <h3>Custom craftovi</h3>
-      <p>
-        Osmisli posebne predmete i craft mogućnosti
-        prilagođene KODEX RP svetu.
-      </p>
-      <div class="ticket-only">
-        CENA I DETALJI ISKLJUČIVO PREKO TIKETA
-      </div>
-      <ul>
-        <li>Dogovor oko predmeta i koncepta</li>
-        <li>Provera tehničkih mogućnosti</li>
-        <li>Realizacija uz odobrenje osoblja</li>
-      </ul>
-      <a class="custom-button"
-         href="https://discord.com/channels/1563942786812612628/1563995786449002679"
-         target="_blank" rel="noopener noreferrer">
-        🛠️ ZATRAŽI PREKO TIKETA
-      </a>
-    </article>
+      <article class="custom-card">
+        <div class="custom-icon">🍽️</div>
+        <span class="custom-tag">UGOSTITELJSTVO</span>
+        <h3>Restorani</h3>
+        <p>Želiš da poseduješ restoran u KODEX RP? Otvori tiket i dogovori detalje sa našim timom.</p>
+        <div class="ticket-only">CENA I DETALJI ISKLJUČIVO PREKO TIKETA</div>
+        <ul>
+          <li>Informacije o dostupnim lokacijama</li>
+          <li>Dogovor oko uslova</li>
+          <li>Provera mogućnosti realizacije</li>
+        </ul>
+        <a class="custom-button"
+           href="https://discord.com/channels/1563942786812612628/1563995786449002679"
+           target="_blank" rel="noopener noreferrer">
+          🍽️ ZATRAŽI PREKO TIKETA
+        </a>
+      </article>
 
-    <article class="custom-card">
-      <div class="custom-icon">🏴</div>
-      <span class="custom-tag">EKSKLUZIVNA OPCIJA</span>
-      <h3>Custom mafije</h3>
-      <p>
-        Želiš svoju jedinstvenu mafiju na KODEX RP?
-        Predstavi ideju i dogovori detalje sa našim timom.
-      </p>
-      <div class="ticket-only">
-        CENA I DETALJI ISKLJUČIVO PREKO TIKETA
-      </div>
-      <ul>
-        <li>Dogovor oko naziva i identiteta</li>
-        <li>Provera dostupnosti i uslova</li>
-        <li>Poseban koncept organizacije</li>
-      </ul>
-      <a class="custom-button"
-         href="https://discord.com/channels/1563942786812612628/1563995786449002679"
-         target="_blank" rel="noopener noreferrer">
-        🏴 ZATRAŽI PREKO TIKETA
-      </a>
-    </article>
+      <article class="custom-card">
+        <div class="custom-icon">🔧</div>
+        <span class="custom-tag">USLUGE</span>
+        <h3>Mehaničarske radnje</h3>
+        <p>Želiš svoju mehaničarsku radnju na KODEX RP? Predstavi svoju ideju našem timu.</p>
+        <div class="ticket-only">CENA I DETALJI ISKLJUČIVO PREKO TIKETA</div>
+        <ul>
+          <li>Informacije o dostupnim lokacijama</li>
+          <li>Dogovor oko uslova i mogućnosti</li>
+          <li>Provera i odobrenje administracije</li>
+        </ul>
+        <a class="custom-button"
+           href="https://discord.com/channels/1563942786812612628/1563995786449002679"
+           target="_blank" rel="noopener noreferrer">
+          🔧 ZATRAŽI PREKO TIKETA
+        </a>
+      </article>
 
-  </div>
+    </div>
+  </section>
 
-  <p class="custom-note">
-    Sve opcije podležu proveri, tehničkim mogućnostima i odobrenju KODEX RP administracije.
-  </p>
+  <!-- KODEX UNDERGROUND -->
 
-</section>
+  <section class="custom-donations">
+    <div class="custom-heading">
+      <span>UNDERGROUND SISTEM</span>
+      <h2>KODEX <b>UNDERGROUND</b></h2>
+      <p>Posebne mogućnosti za organizacije i igrače koji žele jedinstveno iskustvo na serveru.</p>
+    </div>
+
+    <div class="custom-grid">
+
+      <article class="custom-card">
+        <div class="custom-icon">💊</div>
+        <span class="custom-tag">UNDERGROUND OPCIJA</span>
+        <h3>Custom droge</h3>
+        <p>Predloži jedinstven RP koncept za svoju organizaciju ili karakter.</p>
+        <div class="ticket-only">CENA I DETALJI ISKLJUČIVO PREKO TIKETA</div>
+        <ul>
+          <li>Dogovor oko custom koncepta</li>
+          <li>Provera mogućnosti na serveru</li>
+          <li>Realizacija uz odobrenje osoblja</li>
+        </ul>
+        <a class="custom-button"
+           href="https://discord.com/channels/1563942786812612628/1563995786449002679"
+           target="_blank" rel="noopener noreferrer">
+          💊 ZATRAŽI PREKO TIKETA
+        </a>
+      </article>
+
+      <article class="custom-card">
+        <div class="custom-icon">🛠️</div>
+        <span class="custom-tag">UNDERGROUND OPCIJA</span>
+        <h3>Custom craftovi</h3>
+        <p>Osmisli posebne predmete i craft mogućnosti prilagođene KODEX RP svetu.</p>
+        <div class="ticket-only">CENA I DETALJI ISKLJUČIVO PREKO TIKETA</div>
+        <ul>
+          <li>Dogovor oko predmeta i koncepta</li>
+          <li>Provera tehničkih mogućnosti</li>
+          <li>Realizacija uz odobrenje osoblja</li>
+        </ul>
+        <a class="custom-button"
+           href="https://discord.com/channels/1563942786812612628/1563995786449002679"
+           target="_blank" rel="noopener noreferrer">
+          🛠️ ZATRAŽI PREKO TIKETA
+        </a>
+      </article>
+
+      <article class="custom-card">
+        <div class="custom-icon">🏴</div>
+        <span class="custom-tag">EKSKLUZIVNA OPCIJA</span>
+        <h3>Custom mafije</h3>
+        <p>Želiš svoju jedinstvenu mafiju na KODEX RP? Predstavi ideju i dogovori detalje sa našim timom.</p>
+        <div class="ticket-only">CENA I DETALJI ISKLJUČIVO PREKO TIKETA</div>
+        <ul>
+          <li>Dogovor oko naziva i identiteta</li>
+          <li>Provera dostupnosti i uslova</li>
+          <li>Poseban koncept organizacije</li>
+        </ul>
+        <a class="custom-button"
+           href="https://discord.com/channels/1563942786812612628/1563995786449002679"
+           target="_blank" rel="noopener noreferrer">
+          🏴 ZATRAŽI PREKO TIKETA
+        </a>
+      </article>
+
+    </div>
+
+    <p class="custom-note">
+      Sve opcije podležu proveri, tehničkim mogućnostima i odobrenju KODEX RP administracije.
+    </p>
+  </section>
 
 </main>
-
-<section class="custom-donations">
-
-  <div class="custom-heading">
-    <span>POSLOVNE DONACIJE</span>
-    <h2>KAFIĆI <b>I RESTORANI</b></h2>
-    <p>Posebne mogućnosti za vlasnike ugostiteljskih objekata na KODEX RP.</p>
-  </div>
-
-  <div class="custom-grid">
-
-    <article class="custom-card">
-      <div class="custom-icon">☕</div>
-      <span class="custom-tag">UGOSTITELJSTVO</span>
-      <h3>Kafići</h3>
-
-      <p>
-        Želiš svoj kafić u KODEX RP svetu?
-        Pošalji zahtev našem timu i raspitaj se o mogućnostima.
-      </p>
-
-      <div class="ticket-only">
-        CENA I DETALJI ISKLJUČIVO PREKO TIKETA
-      </div>
-
-      <ul>
-        <li>Informacije o dostupnim lokacijama</li>
-        <li>Dogovor oko uslova</li>
-        <li>Provera mogućnosti realizacije</li>
-      </ul>
-
-      <a class="custom-button"
-         href="https://discord.com/channels/1563942786812612628/1563995786449002679"
-         target="_blank"
-         rel="noopener noreferrer">
-        ☕ ZATRAŽI PREKO TIKETA
-      </a>
-    </article>
-
-    <article class="custom-card">
-      <div class="custom-icon">🍽️</div>
-      <span class="custom-tag">UGOSTITELJSTVO</span>
-      <h3>Restorani</h3>
-
-      <p>
-        Želiš da poseduješ restoran u KODEX RP?
-        Otvori tiket i dogovori detalje sa našim timom.
-      </p>
-
-      <div class="ticket-only">
-        CENA I DETALJI ISKLJUČIVO PREKO TIKETA
-      </div>
-
-<article class="custom-card">
-  <div class="custom-icon">🔧</div>
-  <span class="custom-tag">UGOSTITELJSTVO I USLUGE</span>
- 
-  </a>
-</article>
-
-      <ul>
-        <li>Informacije o dostupnim lokacijama</li>
-        <li>Dogovor oko uslova</li>
-        <li>Provera mogućnosti realizacije</li>
-      </ul>
-
-      <a class="custom-button"
-         href="https://discord.com/channels/1563942786812612628/1563995786449002679"
-         target="_blank"
-         rel="noopener noreferrer">
-        🍽️ ZATRAŽI PREKO TIKETA
-      </a>
-    </article>
-    </article> <!-- KRAJ RESTORANA -->
-
-    <article class="custom-card">
-      <!-- OVDE IDE CELA KARTICA MEHANIČARSKIH RADNJI -->
-    </article>
-
-  </div> <!-- KRAJ CUSTOM-GRID -->
-  </div>
-</section>
-
-<footer>
-  © 2026 KODEX RP — Sva prava zadržana.
-</footer>
-
-</body>
-</html>
