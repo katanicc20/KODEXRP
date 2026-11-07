@@ -11,8 +11,7 @@
   --red: #ff2020;
   --dark-red: #a80000;
   --bg: #080808;
-  --panel: #151515;
-  --white: #ffffff;
+  --white: #fff;
   --muted: #bdbdbd;
 }
 
@@ -25,9 +24,7 @@
 body {
   font-family: Arial, sans-serif;
   color: var(--white);
-  background:
-    radial-gradient(ellipse at top, #350909 0%, transparent 55%),
-    var(--bg);
+  background: radial-gradient(ellipse at top, #350909 0%, transparent 55%), var(--bg);
   min-height: 100vh;
 }
 
@@ -61,7 +58,7 @@ header a:hover {
 }
 
 main {
-  width: min(900px, 90%);
+  width: min(1000px, 90%);
   margin: 70px auto;
   text-align: center;
 }
@@ -94,7 +91,6 @@ h1 span {
   margin: 0 auto;
   color: var(--muted);
   line-height: 1.8;
-  font-size: 16px;
 }
 
 .card {
@@ -111,7 +107,6 @@ h1 span {
 .card:hover {
   transform: translateY(-5px);
   border-color: var(--red);
-  box-shadow: 0 15px 45px #ff202018;
 }
 
 .discord-icon {
@@ -139,7 +134,6 @@ h2 {
   border-radius: 8px;
   font-weight: 900;
   transition: .25s;
-  box-shadow: 0 0 25px #ff202022;
 }
 
 .button:hover {
@@ -181,195 +175,13 @@ h2 {
   font-size: 12px;
   line-height: 1.7;
   margin: 25px auto;
-  max-width: 650px;
+  max-width: 750px;
 }
 
-footer {
-  text-align: center;
-  padding: 25px;
-  border-top: 1px solid #ffffff12;
-  color: #777;
-  font-size: 13px;
-}
-
-@media (max-width: 650px) {
-  header {
-    padding: 20px 5%;
-  }
-
-  .steps {
-    grid-template-columns: 1fr;
-  }
-
-  main {
-    margin-top: 45px;
-  }
-
-  .card {
-    padding: 28px 20px;
-  }
-}
-</style>
-</head>
-
-<body>
-
-<header>
-  <div class="logo">KODEX <span>RP</span></div>
-  <a href="index.html">← POČETNA</a>
-</header>
-
-<main>
-  <div class="tag">PODRŽI NAŠU ZAJEDNICU</div>
-
-  <h1>KODEX <span>DONACIJE</span></h1>
-
-  <p class="intro">
-    Želiš da podržiš razvoj KODEX RP servera?
-    Otvori tiket na našem Discordu i naš tim će ti objasniti
-    postupak doniranja i dostupne mogućnosti.
-  </p>
-
-  <section class="card">
-    <div class="discord-icon">🎫</div>
-    <h2>Donacije preko tiketa</h2>
-    <p>
-      Sve informacije dobijaš direktno od našeg tima.
-      Otvori tiket, navedi da želiš da doniraš i sačekaj
-      odgovor nadležnog člana osoblja.
-    </p>
-
-    <!-- ZAMENI LINK ISPOD SVOJIM DISCORD INVITE LINKOM -->
-   <a class="button"
-   href="https://discord.com/channels/1563942786812612628/1563995786449002679"
-   target="_blank"
-   rel="noopener noreferrer">
-  🎫 OTVORI DISCORD TIKET ↗
-</a>
-    </a>
-  </section>
-
-  <h2>Kako funkcioniše?</h2>
-
-  <div class="steps">
-    <div class="step">
-      <div class="number">01</div>
-      <h3>Uđi na Discord</h3>
-      <p>Pridruži se zvaničnom KODEX RP Discord serveru.</p>
-    </div>
-
-    <div class="step">
-      <div class="number">02</div>
-      <h3>Otvori tiket</h3>
-      <p>Izaberi odgovarajuću kategoriju ili zatraži pomoć osoblja.</p>
-    </div>
-
-    <div class="step">
-      <div class="number">03</div>
-      <h3>Dogovori detalje</h3>
-      <p>Tim će ti objasniti dostupne opcije i naredne korake.</p>
-    </div>
-  </div>
-
-  <p class="notice">
-    Donacije su namenjene podršci razvoju servera.
-    Pre uplate proveri sve uslove sa ovlašćenim osobljem.
-    Nemoj slati podatke kartice ili lozinke putem Discord tiketa.
-  </p>
-  
-<section class="custom-donations">
-  <div class="custom-heading">
-    <span>EKSKLUZIVNE OPCIJE</span>
-    <h2>KODEX <b>CUSTOM</b></h2>
-    <p>Personalizuj detalje svog lika u KODEX RP svetu.</p>
-  </div>
-
-  <div class="custom-grid">
-
-    <article class="custom-card">
-      <div class="custom-icon">📱</div>
-      <span class="custom-tag">CUSTOM OPCIJA</span>
-      <h3>Custom broj telefona</h3>
-      <div class="custom-price">20 <small>€</small></div>
-      <p>Izaberi željeni broj telefona za svog lika, u skladu sa dostupnošću na serveru.</p>
-
-      <ul>
-        <li>Personalizovan broj telefona</li>
-        <li>Provera dostupnosti broja</li>
-        <li>Realizacija nakon odobrenja administracije</li>
-      </ul>
-      
-      <a class="custom-button"
-         href=https://discord.gg/2G4qf738A
-         target="_blank"
-         rel="noopener noreferrer">
-        🎫 ZATRAŽI PREKO TIKETA
-      </a>
-    </article>
-  </div>
-
-  <p class="custom-note">
-    Zahtevi podležu proveri i odobrenju administracije.
-    Opcije se realizuju samo ako ih server tehnički podržava.
-    Donacija ne garantuje odobrenje svakog zahteva.
-  </p>
-</section>
-
-
-      <a class="custom-button"
-         href=https://discord.gg/2G4qf738A
-         target="_blank"
-         rel="noopener noreferrer">
-        🎫 ZATRAŽI PREKO TIKETA
-      </a>
-    </article>
-
-    <article class="custom-card">
-      <div class="custom-icon">🚘</div>
-      <span class="custom-tag">CUSTOM OPCIJA</span>
-      <h3>Custom registarske tablice</h3>
-      <div class="custom-price">20 <small>€</small></div>
-      <p>Predloži tekst svojih registarskih tablica i učini vozilo prepoznatljivim.</p>
-
-      <ul>
-        <li>Izbor željenog teksta tablice</li>
-        <li>Provera dostupnosti i pravila</li>
-        <li>Realizacija nakon odobrenja administracije</li>
-      </ul>
-
-      <a class="custom-button"
-         href=https://discord.gg/2G4qf738A
-         target="_blank"
-         rel="noopener noreferrer">
-        🎫 ZATRAŽI PREKO TIKETA
-      </a>
-    </article>
-  
-  </div>
-
-  <p class="custom-note">
-    Zahtevi podležu proveri i odobrenju administracije.
-    Opcije se realizuju samo ako ih server tehnički podržava.
-    Donacija ne garantuje odobrenje svakog zahteva.
-  </p>
-</section>
-
-
-  </div>
-
-  <p class="custom-note">
-    Zahtevi podležu proveri i odobrenju administracije.
-    Opcije se realizuju samo ako ih server tehnički podržava.
-    Donacija ne garantuje odobrenje svakog zahteva.
-  </p>
-</section>
-
-<style>
 .custom-donations {
   max-width: 1000px;
   margin: 65px auto;
-  padding: 20px;
-  color: #fff;
+  padding: 20px 0;
 }
 
 .custom-heading {
@@ -412,6 +224,7 @@ footer {
   background: linear-gradient(145deg, #191919, #0b0b0b);
   border: 1px solid #6e1b22;
   transition: .25s ease;
+  text-align: left;
 }
 
 .custom-card:hover {
@@ -491,6 +304,19 @@ footer {
   transform: scale(1.02);
 }
 
+.ticket-only {
+  display: inline-block;
+  margin: 15px 0 5px;
+  padding: 8px 11px;
+  border: 1px solid #ff303055;
+  border-radius: 6px;
+  color: #ff5555;
+  background: #ff303010;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
 .custom-note {
   text-align: center;
   color: #888;
@@ -499,9 +325,30 @@ footer {
   margin-top: 25px;
 }
 
+footer {
+  text-align: center;
+  padding: 25px;
+  border-top: 1px solid #ffffff12;
+  color: #777;
+  font-size: 13px;
+}
+
 @media (max-width: 650px) {
+  header {
+    padding: 20px 5%;
+  }
+
+  .steps,
   .custom-grid {
     grid-template-columns: 1fr;
+  }
+
+  main {
+    margin-top: 45px;
+  }
+
+  .card {
+    padding: 28px 20px;
   }
 
   .custom-card {
@@ -509,6 +356,162 @@ footer {
   }
 }
 </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">KODEX <span>RP</span></div>
+  <a href="index.html">← POČETNA</a>
+</header>
+
+<main>
+
+  <div class="tag">PODRŽI NAŠU ZAJEDNICU</div>
+
+  <h1>KODEX <span>DONACIJE</span></h1>
+
+  <p class="intro">
+    Želiš da podržiš razvoj KODEX RP servera?
+    Otvori tiket na našem Discordu i naš tim će ti objasniti
+    postupak doniranja i dostupne mogućnosti.
+  </p>
+
+  <section class="card">
+    <div class="discord-icon">🎫</div>
+    <h2>Donacije preko tiketa</h2>
+    <p>
+      Sve informacije dobijaš direktno od našeg tima.
+      Otvori tiket, navedi da želiš da doniraš i sačekaj
+      odgovor nadležnog člana osoblja.
+    </p>
+
+    <a class="button"
+       href="https://discord.com/channels/1563942786812612628/1563995786449002679"
+       target="_blank"
+       rel="noopener noreferrer">
+      🎫 OTVORI DISCORD TIKET ↗
+    </a>
+  </section>
+
+  <h2>Kako funkcioniše?</h2>
+
+  <div class="steps">
+    <div class="step">
+      <div class="number">01</div>
+      <h3>Uđi na Discord</h3>
+      <p>Pridruži se zvaničnom KODEX RP Discord serveru.</p>
+    </div>
+
+    <div class="step">
+      <div class="number">02</div>
+      <h3>Otvori tiket</h3>
+      <p>Izaberi odgovarajuću kategoriju ili zatraži pomoć osoblja.</p>
+    </div>
+
+    <div class="step">
+      <div class="number">03</div>
+      <h3>Dogovori detalje</h3>
+      <p>Tim će ti objasniti dostupne opcije i naredne korake.</p>
+    </div>
+  </div>
+
+  <p class="notice">
+    Donacije su namenjene podršci razvoju servera.
+    Pre uplate proveri sve uslove sa ovlašćenim osobljem.
+    Nemoj slati podatke kartice ili lozinke putem Discord tiketa.
+  </p>
+
+  <section class="custom-donations">
+
+    <div class="custom-heading">
+      <span>EKSKLUZIVNE OPCIJE</span>
+      <h2>KODEX <b>CUSTOM</b></h2>
+      <p>Personalizuj detalje svog lika u KODEX RP svetu.</p>
+    </div>
+
+    <div class="custom-grid">
+
+      <article class="custom-card">
+        <div class="custom-icon">📱</div>
+        <span class="custom-tag">CUSTOM OPCIJA</span>
+        <h3>Custom broj telefona</h3>
+        <div class="custom-price">20 <small>€</small></div>
+        <p>Izaberi željeni broj telefona za svog lika, u skladu sa dostupnošću na serveru.</p>
+
+        <ul>
+          <li>Personalizovan broj telefona</li>
+          <li>Provera dostupnosti broja</li>
+          <li>Realizacija nakon odobrenja administracije</li>
+        </ul>
+
+        <a class="custom-button"
+           href="https://discord.gg/2G4qf738A"
+           target="_blank"
+           rel="noopener noreferrer">
+          🎫 ZATRAŽI PREKO TIKETA
+        </a>
+      </article>
+
+      <article class="custom-card">
+        <div class="custom-icon">🚘</div>
+        <span class="custom-tag">POSEBNA OPCIJA</span>
+        <h3>Donacija vozila</h3>
+
+        <p>
+          Želiš određeno vozilo za svog lika?
+          Pošalji zahtev našem timu i dogovori sve detalje
+          direktno preko Discord tiketa.
+        </p>
+
+        <div class="ticket-only">
+          CENA I DETALJI ISKLJUČIVO PREKO TIKETA
+        </div>
+
+        <ul>
+          <li>Dogovor oko željenog vozila</li>
+          <li>Provera dostupnosti i mogućnosti</li>
+          <li>Informacije o uslovima dobijaš u tiketu</li>
+        </ul>
+
+        <a class="custom-button"
+           href="https://discord.com/channels/1563942786812612628/1563995786449002679"
+           target="_blank"
+           rel="noopener noreferrer">
+          🚘 ZATRAŽI VOZILO PREKO TIKETA
+        </a>
+      </article>
+
+      <article class="custom-card">
+        <div class="custom-icon">🔢</div>
+        <span class="custom-tag">CUSTOM OPCIJA</span>
+        <h3>Custom registarske tablice</h3>
+        <div class="custom-price">20 <small>€</small></div>
+        <p>Predloži tekst svojih registarskih tablica i učini vozilo prepoznatljivim.</p>
+
+        <ul>
+          <li>Izbor željenog teksta tablice</li>
+          <li>Provera dostupnosti i pravila</li>
+          <li>Realizacija nakon odobrenja administracije</li>
+        </ul>
+
+        <a class="custom-button"
+           href="https://discord.gg/2G4qf738A"
+           target="_blank"
+           rel="noopener noreferrer">
+          🎫 ZATRAŽI PREKO TIKETA
+        </a>
+      </article>
+
+    </div>
+
+    <p class="custom-note">
+      Zahtevi podležu proveri i odobrenju administracije.
+      Opcije se realizuju samo ako ih server tehnički podržava.
+      Donacija ne garantuje odobrenje svakog zahteva.
+    </p>
+
+  </section>
 
 </main>
 
